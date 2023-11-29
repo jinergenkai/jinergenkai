@@ -7,7 +7,7 @@
 - 📫 How to reach me ...
 
 ![My Skills](https://skillicons.dev/icons?i=flutter,dotnet,neovim,cpp,cs,dart,rust,lua&perline=10)
-[![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=jinergenkai&theme=tokyo-night)](https://github.com/ashutosh00710/github-readme-activity-graph)
+![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=jinergenkai&theme=tokyo-night)]
 
 
 <!---

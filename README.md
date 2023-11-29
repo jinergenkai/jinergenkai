@@ -13,6 +13,11 @@
 [![LeetCode Stats](https://leetcard.jacoblin.cool/Jinergenkai?theme=nord,unicorn&font=Montserrat&ext=heatmap)](https://leetcode.com/Jinergenkai/) 
 [![Codeforces Stats](https://codeforces-readme-stats.vercel.app/api/card?username=Jinergenkai&theme=default&disable_animations=false&show_icons=true&force_username=true)]()
 
+//⠀⠀ ⠀／))　　　　 　 /)／) 　
+//    (・　　)o　　　(・　　)o 
+//From Jinergenkai with love
+
+
 <!---
 jinergenkai/jinergenkai is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.

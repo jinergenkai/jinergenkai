@@ -10,6 +10,7 @@
 ![My Skills](https://skillicons.dev/icons?i=flutter,dotnet,neovim,cpp,cs,dart,python,rust,lua&perline=10)
 ![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=jinergenkai&theme=tokyo-night)
 
+[Article: Learn in public](./1.md)
 
 [![LeetCode Stats](https://leetcard.jacoblin.cool/Jinergenkai?theme=nord,unicorn&font=Montserrat&ext=heatmap)](https://leetcode.com/Jinergenkai/) 
 [![Codeforces Stats](https://codeforces-readme-stats.vercel.app/api/card?username=Jinergenkai&theme=default&disable_animations=false&show_icons=true&force_username=true)]()

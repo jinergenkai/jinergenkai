@@ -8,7 +8,7 @@
 - 🗞️ I'm writing some article about algorithms, learning journey, technical and lifestyle. Follow me at [Article: Learn in public](./assets/article/learn_in_public.md)
 - 👋 How to reach me: You can contact me via email at [@jinergenkai](mailto:jinergenkai@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/jinergenkai/).
 
-![My Skills](https://skillicons.dev/icons?i=cpp,cs,dart,ts,python,rust&perline=10)
+![My Skills](https://skillicons.dev/icons?i=cpp,cs,dart,ts,python,rust,postgres&perline=10)
 
 ![My Skills](https://skillicons.dev/icons?i=flutter,dotnet,react,electron,neovim&perline=10)
 

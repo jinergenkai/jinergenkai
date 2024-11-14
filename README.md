@@ -5,7 +5,7 @@
 - 👀 I’m interested in software engineering, particularly in developing innovative solutions and optimizing system performance.
 - 🌱 I’m currently learning advanced algorithms, cloud computing, and machine learning techniques.
 - 💞️ I’m looking to collaborate on projects that involve building efficient software systems and enhancing software performance.
-- 🗞️ I'm writing some article about algorithms, learning journey, technical and lifestyle. Follow me at [Article: Learn in public](./assets/article/learn_in_public.md)
+- 🗞️ I'm writing some article about algorithms, learning journey, technical and lifestyle. Follow me at [Jine.Blog](https://jine.blog/)
 - 👋 How to reach me: You can contact me via email at [@jinergenkai](mailto:jinergenkai@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/jinergenkai/).
 
 ![My Skills](https://skillicons.dev/icons?i=cpp,cs,dart,ts,python,rust,postgres&perline=10)

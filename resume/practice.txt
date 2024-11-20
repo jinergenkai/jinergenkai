@@ -1,0 +1,75 @@
+ask from CV.
+ask from work exp saladin -> payment team.
+
+NoSQL sql why NoSQL.
+TH nào use NoSQL,verbose 
+
+Master–slave
+Master-master.
+
+phục vụ availability
+
+persistency, availability in db
+
+Định lý CAP.
+
+service discovery.
+
+CI/CD piple pull push CD on detail.
+
+Chiến lược caching (Caching strategies)
+Cache aside
+
+https http
+
+đăng ký chứng chỉ: server . nginx được đăng ký từ google uy tín let cryupt
+
+bước bắt tay, tùy business show chứng chỉ.
+public key private key bất đối xứng.
+
+gRPC diff restful api (http2 ...how transfer)
+buffer..contract...  json. giảm lương data. cache header.. http2 multiple kênh. tcp/ next pâckeg
+k8s.
+ACID Atomicity, Consistency, Isolation, and Durability giải thích.
+SOLID.
+
+Isolation level DB.
+
+write lock read lock.
+
+golang vs java.
+
+Interpreter và Compiler nhan hơn phần lớn.
+
+https://refactoring.guru/design-patterns/catalog
+
+thread vs 
+
+process instance program.
+thread 1 luồng thwucj thi hoặc nhiều dòng code để đẩy vào cpu. ram.
+
+Goroutines and Threads: Exploring Concurrency in Go
+
+gorun time lightway thread.
+
+goroutine 2kb. giao tiếp thay vì share chung vùng nhớ dung channel. 
+channel là gì...
+
+tạo 1 vùng stack headp riêng, dung chung resrouce 
+con trỏ heap stack
+
+asossiate.
+
+DI IoC. java golang.
+
+index d tree+ bang giới tích nên đánh index ko
+
+shading db. tổ chức sinh nhật. partition.
+
+docker chạy xong hủy instance. chọn option docker add environmance...
+
+NAT network - technical router interal ip -> out bound. cần 1 vài ip public. những ip public bỏ pool
+xét timeout xóa.
+
+docker deamon
+cgroups - điều khiển trình.

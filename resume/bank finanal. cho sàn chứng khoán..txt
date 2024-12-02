@@ -1,0 +1,58 @@
+bank finanal. cho sàn chứng khoán. service khác gọi vào đó.
+tcp map theo bit.
+intergrate với ca ngân hang trong callback function thành công đén trước api hiện tại bị lock moriteroring .
+
+cho 1 mảng tìm số nguyên thứ k.
+
+
+Composition over inheritance
+java thay vì inherite hết. golang ko theo vậy. embeded
+khai báo struct, nhúng struct khác. implement nhúng.
+tach nhiều thành phần ghép lại.
+
+struct a implement interface x.
+
+struct a nhúng struct b....
+
+khi truyền biến, ưu tiên cái nào hơn.
+
+a nhúng b, b implem x.
+
+abstraction a.
+
+
+unbuffer channel ~ pipline: push gì vào, chờ đẩy vào rút ra cùng 1 lúc.
+buffer channel ~ quêu ~ capacity -> 1 1 1 1.
+
+gorotine.
+
+1 channel khi close có vấn đề gì.
+atomximity.
+
+channel + thread pool.
+race condition. 4 nguye ntac, deadlock linelock.
+
+mõm. khác biệt -> compiler vs interpreter. mineset ko phải oop. hướng đối tuowngko i chuẩn ngôn ngữ là phong cách code. map đối tượng.... custom minde solid.
+
+khác biệt về framework. c# dotnet. java spring boot.
+
+mỗi lib có những dev riêng. busuf, golang cần gì import đó. nhìn golang trình độ code.
+
+
+
+service discovery
+
+rest chuẩn - restful webservice..........
+grpc... golang...
+
+HTTP/1.1 và HTTP/2
+
+low coupling... biết thay đổi khi nào push notification. có các method. interval call. websocket. lơ pulling. 
+
+https certificate hết hạn CA lưu cache browser, browser cache.
+
+Jenkins cơ chế pull hay put, 2 cơ chế CI/CD.
+interval query image....
+
+bách khoa khtn... khoa học máy tính.
+bách khoa.

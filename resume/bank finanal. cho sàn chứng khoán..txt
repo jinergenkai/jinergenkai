@@ -56,3 +56,15 @@ interval query image....
 
 bách khoa khtn... khoa học máy tính.
 bách khoa.
+
+
+
+
+Minimum 2 years of Java programming and Web Development.
+Strong knowledge of Spring Boot architecture and best practices.
+Familiar with performance techniques such as caching, multithreading, monitoring, etc.
+Familiar with SQL databases including MySQL/MariaDB, etc.
+Excellent in problem-solving and analytical skills.
+Experience with product development and monitoring, having mindset of product ownership, improvements and innovation.
+Strong debugging and profiling skills.
+Familiar and practiced w

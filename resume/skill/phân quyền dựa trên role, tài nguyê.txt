@@ -1,0 +1,6 @@
+phân quyền dựa trên role, tài nguyên người dung
+2 user a,b;
+a get...
+/get order by id.
+lay accesstoken.
+biet id, username. so sanh id == get order by id.

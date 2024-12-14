@@ -12,7 +12,7 @@
 
 ![My Skills](https://skillicons.dev/icons?i=flutter,dotnet,react,electron,neovim&perline=10)
 
-![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=jinergenkai&theme=tokyo-night)
+<!-- ![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=jinergenkai&theme=tokyo-night) -->
 
 [![LeetCode Stats](https://leetcard.jacoblin.cool/Jinergenkai?theme=nord,unicorn&font=Montserrat&ext=heatmap)](https://leetcode.com/Jinergenkai/) 
 

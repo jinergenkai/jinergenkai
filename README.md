@@ -2,7 +2,7 @@
 
 # 👋 Hung Nguyen • `@jinergenkai`
 
-### Software Engineer | Problem Solver | Coffee-to-Code Converter
+### Software Engineer | Problem Solver | Ringleader of Unpaid AIs (Still Reviewing Their PRs)
 
 *Building things that don't break at 3AM*
 
@@ -20,11 +20,11 @@
 ```python
 me = {
     "role": "Software Engineer",
-    "workplace": "A place where YAML is considered a programming language",
-    "debug_at": "3AM",  # When bugs are most honest
+    "workplace": "Where YAML is considered a programming language",
     "philosophy": "Systems that don't need a PhD to debug",
-    "stack": ["Backend", "Automation", "Distributed Systems"],
-    "job_security": "Writing code AI can't... yet 🤖"
+    "stack": ["Backend", "Algorithm", "Distributed Systems", "AI via API"],
+    "job_security": "Writing code AI can't... yet 🤖",
+    "prod_status": "Still alive"
 }
 ```
 
@@ -35,7 +35,7 @@ me = {
 - **Full-time opportunities** where code quality > quick hacks
 - **Coffee chats** about algorithms, system design, or startup ideas
 
-## 🦖 Tech Arsenal
+## 🛠️ Tech Arsenal
 
 **Daily Drivers**
 ```
@@ -53,16 +53,11 @@ Systems:   NETCONF/YANG • Network Automation
 
 Got a project? Need help debugging? Just want to talk code?
 
-Drop me a line: 📧 [jinergenkai@gmail.com](mailto:jinergenkai@gmail.com) • 💼 [LinkedIn](https://www.linkedin.com/in/jinergenkai/) • 📝 [Jine.Blog](https://jine.blog/)
+Drop me a line: 📧 [jinergenkai@gmail.com](mailto:jinergenkai@gmail.com) • 💼 [LinkedIn](https://www.linkedin.com/in/jinergenkai/)
 
 ---
 
 <div align="center">
-
-
-<table border="0">
-<tr>
-<td width="50%" style="border: none;">
 
 ```ascii
     ／))        /)／)
@@ -70,17 +65,4 @@ Drop me a line: 📧 [jinergenkai@gmail.com](mailto:jinergenkai@gmail.com) • �
 "JinerGenkai - Just Grow"
 "Still debugging, still learning/"
 ```
-
-
-
-</td>
-<td width="50%" style="border: none;">
-
-<img src="assets/image/home_chill.gif" alt="coding" width="100%"/>
-
-</td>
-</tr>
-</table>
-
-![Profile Views](https://komarev.com/ghpvc/?username=jinergenkai&color=blueviolet&style=flat-square)
-
+<img src="assets/image/home_chill.gif" alt="drawing" width="40%" height="50%"/> <img src="assets/image/japan_chill.gif" alt="drawing" width="47.5%" height="50%"/>

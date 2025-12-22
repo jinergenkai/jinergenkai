@@ -5,19 +5,34 @@
 
 #import "@preview/lucide:0.1.0": *
 
+
+// ==============================================================================
+// FONT SIZES - Giảm toàn bộ để tạo khoảng trống
+// ==============================================================================
+
+#let font_base = 8.5pt                // Base font size
+#let font_name = 21.5pt             // Name in header
+#let font_job_title = 9pt          // Job title in header
+#let font_section = 11pt            // Section headers: CONTACT, EDUCATION, etc.
+#let font_subsection = 9pt          // Subsection titles: BACKEND, project names, etc.
+#let font_body = 8.5pt              // Body text and descriptions
+#let font_detail = 8pt              // Detail text: dates, locations, contact info
+#let font_small = 7.5pt             // Small text: tech stack, footer
+
+
 // ==============================================================================
 // PAGE & TEXT CONFIGURATION
 // ==============================================================================
 
 #set page(
   paper: "a4",
-  margin: (x: 2cm, y: 2cm),
+  margin: (x: 1.5cm, y: 2cm),
   fill: rgb("#f5f5f5"),
 )
 
 #set text(
   font: "New Computer Modern",
-  size: 10pt,
+  size: font_base,
   fill: rgb("#2d2d2d"),
 )
 
@@ -31,6 +46,7 @@
 #let secondary = rgb("#5a5a5a")     // Medium gray
 #let accent = rgb("#1a1a1a")        // Dark text
 #let divider = rgb("#d0d0d0")       // Light divider
+#let text_color = rgb("#2d2d2d")      // Main text color
 #let timeline_color = secondary     // Timeline color
 
 // ==============================================================================
@@ -48,7 +64,7 @@
   color: timeline_color,
   dx: -0.77cm,
   dy_dot: 0.1em,
-  dy_line: 2em
+  dy_line: 2em,
 ) = {
   // Dot
   place(left + top, dx: dx, dy: dy_dot, timeline_dot(color: color))
@@ -56,52 +72,59 @@
   // Vertical line
   place(
     left + top,
-    dx: dx + 0.05cm,
+    dx: dx + 0.075cm,
     dy: dy_line,
-    box(width: 1pt, height: height, fill: color)
+    box(width: 1pt, height: height, fill: color),
   )
 }
 
 // ==============================================================================
-// HEADER SECTION
+// HEADER SECTION - Inspired by cv02.png design
 // ==============================================================================
 
 #block(
   width: 100%,
   [
-    // Background initials
+    // Background initial letter with primary color
     #place(
       top + left,
-      dx: 0cm,
-      dy: -0.5cm,
+      dx: -0.3cm,
+      dy: -0.8cm,
       text(
-        size: 120pt,
-        fill: rgb("#e0e0e0"),
+        size: 110pt,
+        fill: primary.lighten(50%), // Soft blue, very light
         weight: "bold",
         font: "New Computer Modern",
-      )[NM]
+      )[H#text(size: 10pt, fill: secondary, weight: "bold", font: "New Computer Modern")[#h(2.5em)Software Engineer]],
     )
 
-    #v(1.5cm)
+    // Vertical divider line
+    #place(
+      top + left,
+      dx: 3.8cm,
+      dy: -0.6cm,
+      line(length: 2.5cm, stroke: 1pt + primary.lighten(30%), angle: 90deg),
+    )
+
+    #v(.8cm)
 
     // Name
     #text(
-      size: 18pt,
-      weight: "regular",
+      size: font_name,
+      weight: "bold",
       fill: accent,
-      tracking: 0.2em,
+      tracking: 0.15em,
     )[Nguyen Manh Hung]
-
-    #v(0.40em)
-
+    #v(0.1cm)
     // Job title
     #text(
-      size: 11pt,
+      size: font_job_title,
       weight: "regular",
       fill: secondary,
-      tracking: 0.25em,
-    )[SOFTWARE ENGINEER]
-  ]
+      // tracking: 0.05em,
+    )[With 2+ years of experience in enterprise Java and backend engineering, Integrating AI into scalable systems. \
+    ICPC medalist, currently developing large-scale Fixed Network Management Systems at work.]
+  ],
 )
 
 #v(0.5cm)
@@ -111,8 +134,8 @@
 // ==============================================================================
 
 #grid(
-  columns: (25%, 70%),
-  column-gutter: 1.0cm,
+  columns: (30%, 65%),
+  column-gutter: 0.5cm,
 
   // ============================================================================
   // LEFT COLUMN
@@ -124,30 +147,32 @@
       below: 1.5em,
       [
         #text(
-          size: 11pt,
+          size: font_section,
           weight: "bold",
           tracking: 0.15em,
           fill: accent,
-        )[#lucide-icon("circle-user-round") CONTACT]
+        )[#box(baseline: 15%)[#lucide-icon("wifi")] CONTACT]
 
-        #v(0.8em)
+        #v(0.5em)
         #line(length: 2cm, stroke: 0.5pt + accent)
-        #v(1em)
+        #v(0.7em)
 
-        #set text(size: 9pt, fill: secondary)
+        #set text(size: font_detail, fill: secondary)
 
         #grid(
           columns: (auto, 1fr),
           row-gutter: 0.8em,
           column-gutter: 0.5em,
 
-          [*E*], [nmhung.works\@gmail.com],
-          [*A*], [Ho Chi Minh City, Vietnam],
-          [*P*], [+84 947 339 718],
-          [*L*], [linkedin.com/in/jinergenkai],
-          [*G*], [github.com/jinergenkai],
+          [#lucide-icon("mail", size: 7pt)], [#link("mailto:nmhung.works@gmail.com")[nmhung.works\@gmail.com]],
+          [#lucide-icon("map-pin", size: 7pt)], [Ho Chi Minh City, Vietnam],
+          [#lucide-icon("phone", size: 7pt)], [#link("tel:+84947339718")[+84 947 339 718]],
+          [#lucide-icon("linkedin", size: 7pt)],
+          [#link("https://linkedin.com/in/jinergenkai")[linkedin.com/in/jinergenkai]],
+
+          [#lucide-icon("github", size: 7pt)], [#link("https://github.com/jinergenkai")[github.com/jinergenkai]],
         )
-      ]
+      ],
     )
 
     // EDUCATION SECTION
@@ -156,44 +181,44 @@
       below: 1.5em,
       [
         #text(
-          size: 11pt,
+          size: font_section,
           weight: "bold",
           tracking: 0.15em,
           fill: accent,
-        )[#lucide-icon("graduation-cap") EDUCATION]
+        )[#box(baseline: 15%)[#lucide-icon("graduation-cap")] EDUCATION]
 
-        #v(0.8em)
+        #v(0.5em)
         #line(length: 2cm, stroke: 0.5pt + accent)
-        #v(1em)
+        #v(0.7em)
 
         // Bachelor Degree
         #block(
           below: 1.2em,
           [
-            #text(size: 10pt, weight: "bold", fill: accent)[BACHELOR DEGREE]
+            #text(size: font_subsection, weight: "bold", fill: accent)[BACHELOR DEGREE]
             #v(0.3em)
-            #text(size: 9pt, fill: secondary)[FPT University HCMC]
+            #text(size: font_detail, fill: secondary)[FPT University HCMC]
             #v(0.2em)
-            #text(size: 9pt, fill: secondary)[Information Technology]
+            #text(size: font_detail, fill: secondary)[Information Technology]
             #v(0.2em)
-            #text(size: 8.5pt, fill: secondary, style: "italic")[2020 - 2024 • GPA 8.0/10]
-          ]
+            #text(size: font_small, fill: secondary, style: "italic")[2020 - 2024 • GPA 8.0/10]
+          ],
         )
 
         // Gifted Program
         #block(
           below: 1.2em,
           [
-            #text(size: 10pt, weight: "bold", fill: accent)[GIFTED PROGRAM]
+            #text(size: font_subsection, weight: "bold", fill: accent)[GIFTED PROGRAM]
             #v(0.3em)
-            #text(size: 9pt, fill: secondary)[Nguyen Du High School]
+            #text(size: font_detail, fill: secondary)[Nguyen Du High School for Gift]
             #v(0.2em)
-            #text(size: 9pt, fill: secondary)[Informatics]
+            #text(size: font_detail, fill: secondary)[Informatics]
             #v(0.2em)
-            #text(size: 8.5pt, fill: secondary, style: "italic")[2017 - 2020]
-          ]
+            #text(size: font_small, fill: secondary, style: "italic")[2017 - 2020]
+          ],
         )
-      ]
+      ],
     )
 
     // SKILLS SECTION
@@ -202,20 +227,20 @@
       below: 1.5em,
       [
         #text(
-          size: 11pt,
+          size: font_section,
           weight: "bold",
           tracking: 0.15em,
           fill: accent,
-        )[#lucide-icon("corner-up-left") SKILLS]
+        )[#box(baseline: 15%)[#lucide-icon("bow-arrow")] SKILLS]
 
-        #v(0.8em)
+        #v(0.5em)
         #line(length: 2cm, stroke: 0.5pt + accent)
-        #v(1em)
+        #v(0.7em)
 
-        #set text(size: 9pt, fill: secondary)
+        #set text(size: font_detail, fill: secondary)
 
         // Backend Skills
-        #text(size: 10pt, weight: "bold", fill: accent)[BACKEND]
+        #text(size: font_subsection, weight: "bold", fill: accent)[BACKEND]
         #v(0.4em)
         • Java & Spring Boot\
         • C\# & ASP.NET Core\
@@ -225,7 +250,7 @@
         #v(1em)
 
         // Testing & CI/CD Skills
-        #text(size: 10pt, weight: "bold", fill: accent)[TESTING & CI/CD]
+        #text(size: font_subsection, weight: "bold", fill: accent)[TESTING & CI/CD]
         #v(0.4em)
         • Robot Framework\
         • JUnit & Integration Tests\
@@ -235,7 +260,7 @@
         #v(1em)
 
         // Frontend Skills
-        #text(size: 10pt, weight: "bold", fill: accent)[FRONTEND]
+        #text(size: font_subsection, weight: "bold", fill: accent)[FRONTEND]
         #v(0.4em)
         • Angular & React.js\
         • TypeScript\
@@ -245,7 +270,7 @@
         #v(1em)
 
         // DevOps & Tools
-        #text(size: 10pt, weight: "bold", fill: accent)[DEVOPS & TOOLS]
+        #text(size: font_subsection, weight: "bold", fill: accent)[DEVOPS & TOOLS]
         #v(0.4em)
         • Kubernetes & Docker\
         • PostgreSQL & Redis\
@@ -255,13 +280,13 @@
         #v(1em)
 
         // Algorithms Skills
-        #text(size: 10pt, weight: "bold", fill: accent)[ALGORITHMS]
+        #text(size: font_subsection, weight: "bold", fill: accent)[ALGORITHMS]
         #v(0.4em)
         • Competitive Programming\
         • Dynamic Programming\
         • Graph Theory\
         • Data Structures
-      ]
+      ],
     )
 
     // AWARDS SECTION
@@ -269,17 +294,17 @@
       above: 0em,
       [
         #text(
-          size: 11pt,
+          size: font_section,
           weight: "bold",
           tracking: 0.15em,
           fill: accent,
-        )[#lucide-icon("award") AWARDS]
+        )[#box(baseline: 15%)[#lucide-icon("award")] AWARDS]
 
-        #v(0.8em)
+        #v(0.5em)
         #line(length: 2cm, stroke: 0.5pt + accent)
-        #v(1em)
+        #v(0.7em)
 
-        #set text(size: 9pt, fill: secondary)
+        #set text(size: font_detail, fill: secondary)
 
         #block(below: 0.8em)[
           • *ICPC 2023* - Third Prize\
@@ -300,7 +325,7 @@
           • *National High School 2020*\
           #h(0.5em) Informatics - Honorable Mention
         ]
-      ]
+      ],
     )
   ],
 
@@ -308,65 +333,45 @@
   // RIGHT COLUMN
   // ============================================================================
   [
-    // PROFILE SECTION
-    #block(
-      above: 0em,
-      below: 1.8em,
-      [
-        #text(
-          size: 11pt,
-          weight: "bold",
-          tracking: 0.15em,
-          fill: accent,
-        )[#lucide-icon("traffic-cone") PROFILE]
 
-        #v(0.8em)
-        #line(length: 100%, stroke: 0.5pt + divider)
-        #v(1em)
-
-        #set text(size: 10pt, fill: secondary)
-
-        Software Engineer with 1.5+ years of experience specializing in enterprise Java development and test automation. Currently at Nokia developing Fixed Network Management Systems using Spring Boot, Angular, and Robot Framework. Strong background in competitive programming with expertise in building scalable backend systems, RESTful APIs, and CI/CD pipelines. ICPC medalist with proven track record in optimizing system performance and delivering high-quality software solutions.
-      ]
-    )
 
     // EXPERIENCE SECTION
     #block(
-      above: 0em,
+      above: 3em,
       [
         #text(
-          size: 11pt,
+          size: font_section,
           weight: "bold",
           tracking: 0.15em,
           fill: accent,
-        )[#lucide-icon("briefcase") EXPERIENCE]
+        )[#box(baseline: 15%)[#lucide-icon("briefcase")] EXPERIENCE]
 
-        #v(0.8em)
+        #v(0.5em)
         #line(length: 100%, stroke: 0.5pt + divider)
-        #v(1em)
+        #v(0.7em)
 
         // Nokia Position
         #block(
           below: 1.5em,
           [
-            #timeline_item(height: 29em)
+            #timeline_item(height: 25em)
 
             #grid(
               columns: (1fr, auto),
-              [#text(size: 10pt, weight: "bold", fill: accent)[SOFTWARE ENGINEER - FNMS TEAM]],
-              [#text(size: 9pt, fill: secondary, style: "italic")[Apr 2024 - Present]]
+              [#text(size: font_subsection, weight: "bold", fill: accent)[SOFTWARE ENGINEER - FNMS TEAM]],
+              [#text(size: font_detail, fill: secondary, style: "italic")[Apr 2024 - Present]],
             )
 
             #v(0.3em)
-            #text(size: 10pt, fill: secondary)[Nokia | Ho Chi Minh City]
+            #text(size: font_body, fill: secondary)[Nokia | Ho Chi Minh City]
             #v(0.8em)
 
-            #set text(size: 9.5pt, fill: secondary)
+            #set text(size: font_body, fill: secondary)
 
             Developed Fixed Network Management System (FNMS) for optical network device management using enterprise Java technologies. Led implementation of device software upgrade campaigns and automated testing infrastructure.
 
             #v(0.6em)
-            #set text(size: 9pt)
+            #set text(size: font_detail)
 
             • Built comprehensive REST API endpoints for software campaign management using Spring Boot microservices with proper error handling, logging, and validation\
             • Implemented device software upgrade features with retry mechanisms and timeout handling for NT/LT board reachability verification across distributed network infrastructure\
@@ -376,10 +381,10 @@
             • Collaborated with cross-functional teams using Agile methodologies, participating in sprint planning, daily standups, and code reviews
 
             #v(0.5em)
-            #text(size: 8.5pt, fill: secondary, style: "italic")[
+            #text(size: font_small, fill: secondary, style: "italic")[
               Tech Stack: Java, Spring Boot, Angular, Robot Framework, Maven, Kubernetes, Jenkins, PostgreSQL
             ]
-          ]
+          ],
         )
 
         // FPT Software Position
@@ -390,41 +395,44 @@
 
             #grid(
               columns: (1fr, auto),
-              [#text(size: 10pt, weight: "bold", fill: accent)[SOFTWARE ENGINEER - ALOKA TEAM]],
-              [#text(size: 9pt, fill: secondary, style: "italic")[Aug 2023 - Apr 2024]]
+              [#text(size: font_subsection, weight: "bold", fill: accent)[SOFTWARE ENGINEER - ALOKA TEAM]],
+              [#text(size: font_detail, fill: secondary, style: "italic")[Aug 2023 - Apr 2024]],
             )
 
             #v(0.3em)
-            #text(size: 10pt, fill: secondary)[FPT Software | Ho Chi Minh City]
+            #text(size: font_body, fill: secondary)[FPT Software | Ho Chi Minh City]
             #v(0.8em)
 
-            #set text(size: 9.5pt, fill: secondary)
+            #set text(size: font_body, fill: secondary)
 
             Developed medical imaging software for ultrasound analysis focusing on vascular measurement tools and performance optimization.
 
             #v(0.6em)
-            #set text(size: 9pt)
+            #set text(size: font_detail)
 
             • Implemented measurement and annotation features for blood flow analysis, vessel sizing, and wall thickness detection in medical imaging applications\
             • Optimized application performance by offloading heavy I/O operations from UI thread, reducing startup time by 40% and improving responsiveness\
             • Restructured API response formats to meet specific client requirements, ensuring efficient data delivery and seamless frontend integration
 
             #v(0.5em)
-            #text(size: 8.5pt, fill: secondary, style: "italic")[
+            #text(size: font_small, fill: secondary, style: "italic")[
               Tech Stack: C++, C\#, WPF, ASP.NET Core
             ]
-          ]
+          ],
         )
 
         // PROJECTS SUBSECTION
         #v(1em)
         #text(
-          size: 10pt,
+          size: font_subsection,
           weight: "bold",
           tracking: 0.1em,
           fill: accent,
-        )[#lucide-icon("user") SELECTED PROJECTS]
-        #v(0.8em)
+        )[#box(baseline: 15%)[#lucide-icon("user")] SELECTED PROJECTS]
+
+        #v(0.5em)
+        #line(length: 100%, stroke: 0.5pt + divider)
+        #v(0.7em)
 
         // Project 1: Huynh Hanh Financial Management
         #block(
@@ -434,20 +442,20 @@
 
             #grid(
               columns: (1fr, auto),
-              [#text(size: 10pt, weight: "bold", fill: accent)[Huynh Hanh Financial Management]],
-              [#text(size: 9pt, fill: secondary, style: "italic")[Aug 2024 - Feb 2025]]
+              [#text(size: font_subsection, weight: "bold", fill: accent)[Huynh Hanh Financial Management]],
+              [#text(size: font_detail, fill: secondary, style: "italic")[Aug 2024 - Feb 2025]],
             )
 
             #v(0.5em)
-            #set text(size: 9pt, fill: secondary)
+            #set text(size: font_detail, fill: secondary)
 
             • Full-stack agricultural operations platform with AI chatbot integration using PhoBERT for Vietnamese NLP\
             • Built real-time truck weighing system with Web Serial API, data storage, receipt printing, and report export\
             • Developed crop lifecycle management with 3D GPS visualization for planting area tracking
 
             #v(0.3em)
-            #text(size: 8.5pt, style: "italic")[ASP.NET Core, React.js, Electron.js, Material UI, Docker]
-          ]
+            #text(size: font_small, style: "italic")[ASP.NET Core, React.js, Electron.js, Material UI, Docker]
+          ],
         )
 
         // Project 2: SmartMicro IoT Platform
@@ -458,24 +466,24 @@
 
             #grid(
               columns: (1fr, auto),
-              [#text(size: 10pt, weight: "bold", fill: accent)[SmartMicro IoT Platform]],
-              [#text(size: 9pt, fill: secondary, style: "italic")[Feb 2024 - Apr 2024]]
+              [#text(size: font_subsection, weight: "bold", fill: accent)[SmartMicro IoT Platform]],
+              [#text(size: font_detail, fill: secondary, style: "italic")[Feb 2024 - Apr 2024]],
             )
 
             #v(0.5em)
-            #set text(size: 9pt, fill: secondary)
+            #set text(size: font_detail, fill: secondary)
 
             • Mobile IoT platform for smart home device management with voice control capabilities\
             • Connected BLE devices via GATT/UART protocols for real-time device control\
             • Integrated OpenAI API with Flutter TTS for voice-activated home automation
 
             #v(0.3em)
-            #text(size: 8.5pt, style: "italic")[Flutter, GetX, ASP.NET Core, SignalR, OpenAI API]
-          ]
+            #text(size: font_small, style: "italic")[Flutter, GetX, ASP.NET Core, SignalR, OpenAI API]
+          ],
         )
-      ]
+      ],
     )
-  ]
+  ],
 )
 
 // ==============================================================================
@@ -485,7 +493,7 @@
 #v(1cm)
 
 #align(center)[
-  #text(size: 8pt, fill: secondary)[
+  #text(size: font_small, fill: secondary)[
     Portfolio: jine.blog • Updated December 2024
   ]
 ]

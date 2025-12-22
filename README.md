@@ -1,32 +1,68 @@
-<h1><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/> Hi, I’m Manh Hung. Nice to see you!</h1>
+<div align="center">
 
-<img src="assets/image/home_chill.gif" alt="drawing" width="40%" height="50%"/> <img src="assets/image/japan_chill.gif" alt="drawing" width="47.5%" height="50%"/> 
+# 👋 Hung Nguyen • `@jinergenkai`
 
-- 👀 I’m interested in software engineering, particularly in developing innovative solutions and optimizing system performance.
-- 🌱 I’m currently learning advanced algorithms, cloud computing, and machine learning techniques.
-- 💞️ I’m looking to collaborate on projects that involve building efficient software systems and enhancing software performance.
-- 🗞️ I'm writing some article about algorithms, learning journey, technical and lifestyle. Follow me at [Jine.Blog](https://jine.blog/)
-- 👋 How to reach me: You can contact me via email at [@jinergenkai](mailto:jinergenkai@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/jinergenkai/).
+### Software Engineer | Problem Solver | Ringleader of Unpaid AIs (Still Reviewing Their PRs)
 
-![My Skills](https://skillicons.dev/icons?i=cpp,cs,dart,ts,python,rust,postgres&perline=10)
+*Building things that don't break at 3AM*
 
-![My Skills](https://skillicons.dev/icons?i=flutter,dotnet,react,electron,neovim&perline=10)
+[![Email](https://img.shields.io/badge/Email-jinergenkai%40gmail.com-red?style=flat-square&logo=gmail)](mailto:jinergenkai@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/jinergenkai/)
+[![Blog](https://img.shields.io/badge/Blog-Jine.Blog-orange?style=flat-square&logo=rss)](https://jine.blog/)
+![Profile Views](https://komarev.com/ghpvc/?username=jinergenkai&color=blueviolet&style=flat-square)
 
-<!-- ![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=jinergenkai&theme=tokyo-night) -->
+</div>
 
-[![LeetCode Stats](https://leetcard.jacoblin.cool/Jinergenkai?theme=nord,unicorn&font=Montserrat&ext=heatmap)](https://leetcode.com/Jinergenkai/) 
+---
 
-[![Codeforces Stats](https://codeforces-readme-stats.vercel.app/api/card?username=Jinergenkai&theme=default&disable_animations=false&show_icons=true&force_username=true)]()
+## 😎 What I Do
+
+```python
+me = {
+    "role": "Software Engineer",
+    "workplace": "Where YAML is considered a programming language",
+    "philosophy": "Systems that don't need a PhD to debug",
+    "stack": ["Backend", "Algorithm", "Distributed Systems", "AI via API"],
+    "job_security": "Writing code AI can't... yet 🤖",
+    "prod_status": "Still alive"
+}
 ```
+
+## 🎭 Open For
+
+- **Collaboration** on backend systems, automation tools, or anything that scales
+- **Freelance** projects (Spring Boot, Flutter, automation pipelines)
+- **Full-time opportunities** where code quality > quick hacks
+- **Coffee chats** about algorithms, system design, or startup ideas
+
+## 🛠️ Tech Arsenal
+
+**Daily Drivers**
+```
+Backend:   Java • Spring Boot • PostgreSQL • REST APIs
+Frontend:  Angular • Flutter • React
+DevOps:    Docker • Kubernetes • Jenkins • Git
+Systems:   NETCONF/YANG • Network Automation
+```
+
+![Skills](https://skillicons.dev/icons?i=java,spring,cpp,cs,dart,ts,python,rust,postgres,angular,flutter,dotnet,react,docker,kubernetes,git&perline=8)
+
+
+
+## 💬 Let's Build Something
+
+Got a project? Need help debugging? Just want to talk code?
+
+Drop me a line: 📧 [jinergenkai@gmail.com](mailto:jinergenkai@gmail.com) • 💼 [LinkedIn](https://www.linkedin.com/in/jinergenkai/)
+
+---
+
+<div align="center">
+
+```ascii
     ／))        /)／)
    (・   )o    (・   )o
 "JinerGenkai - Just Grow"
+"Still debugging, still learning/"
 ```
-
-
-
-<!---
-jinergenkai/jinergenkai is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
-say oh yeah
---->
+<img src="assets/image/home_chill.gif" alt="drawing" width="40%" height="50%"/> <img src="assets/image/japan_chill.gif" alt="drawing" width="47.5%" height="50%"/>

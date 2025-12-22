@@ -20,6 +20,40 @@
 #let secondary = rgb("#5a5a5a")    // Medium gray
 #let accent = rgb("#1a1a1a")       // Dark text
 #let divider = rgb("#d0d0d0")      // Light divider
+#let timeline_color = secondary // Timeline blue
+
+// Helper function for timeline dot
+#let timeline_dot(color: timeline_color) = {
+  circle(
+    radius: 2.5pt,
+    fill: color,
+    // stroke: 2pt + white,
+  )
+}
+
+// Helper function for timeline item (dot + line)
+// , dx: -0.77cm, dy_dot: 0.1em, dy_line: 2em
+#let timeline_item(height: 10em, color: timeline_color, dx: -0.77cm, dy_dot: 0.1em, dy_line: 2em) = {
+  // Timeline dot
+  place(
+    left + top,
+    dx: dx,
+    dy: dy_dot,
+    timeline_dot(color: color)
+  )
+  
+  // Vertical line
+  place(
+    left + top,
+    dx: dx + 0.05cm,
+    dy: dy_line,
+    box(
+      width: 1pt,
+      height: height,
+      fill: color,
+    )
+  )
+}
 
 // Header with large name and transparent initials
 #block(
@@ -32,11 +66,11 @@
       dy: -0.5cm,
       [
         #text(
-          size: 130pt,
-          fill: primary,
+          size: 120pt,
+          fill: rgb("#e0e0e0"),
           weight: "bold",
           font: "New Computer Modern",
-        )[--]
+        )[NM]
       ]
     )
     
@@ -83,7 +117,7 @@
           weight: "bold",
           tracking: 0.15em,
           fill: accent,
-        )[CONTACT]
+        )[📧 CONTACT]
         
         #v(0.8em)
         #line(length: 2cm, stroke: 0.5pt + accent)
@@ -115,7 +149,7 @@
           weight: "bold",
           tracking: 0.15em,
           fill: accent,
-        )[EDUCATION]
+        )[🎓 EDUCATION]
         
         #v(0.8em)
         #line(length: 2cm, stroke: 0.5pt + accent)
@@ -161,7 +195,7 @@
           weight: "bold",
           tracking: 0.15em,
           fill: accent,
-        )[SKILLS]
+        )[💻 SKILLS]
         
         #v(0.8em)
         #line(length: 2cm, stroke: 0.5pt + accent)
@@ -171,50 +205,50 @@
         #v(0.4em)
         #set text(size: 9pt, fill: secondary)
         
-        [ • Java & Spring Boot]
-        [ • C\# & ASP.NET Core]
-        [ • RESTful API Design]
-        [ • Maven & Microservices]
+        • Java & Spring Boot\
+        • C\# & ASP.NET Core\
+        • RESTful API Design\
+        • Maven & Microservices
         
         #v(1em)
         
         #text(size: 10pt, weight: "bold", fill: accent)[TESTING & CI/CD]
         #v(0.4em)
         
-        [ • Robot Framework]
-        [ • JUnit & Integration Tests]
-        [ • Jenkins Pipelines]
-        [ • GitHub Actions]
+        • Robot Framework\
+        • JUnit & Integration Tests\
+        • Jenkins Pipelines\
+        • GitHub Actions
         
         #v(1em)
         
         #text(size: 10pt, weight: "bold", fill: accent)[FRONTEND]
         #v(0.4em)
         
-        [ • Angular & React.js]
-        [ • TypeScript]
-        [ • Flutter Mobile]
-        [ • TailwindCSS]
+        • Angular & React.js\
+        • TypeScript\
+        • Flutter Mobile\
+        • TailwindCSS
         
         #v(1em)
         
         #text(size: 10pt, weight: "bold", fill: accent)[DEVOPS & TOOLS]
         #v(0.4em)
         
-        [ • Kubernetes & Docker]
-        [ • PostgreSQL & Redis]
-        [ • Git & Version Control]
-        [ • Kong API Gateway]
+        • Kubernetes & Docker\
+        • PostgreSQL & Redis\
+        • Git & Version Control\
+        • Kong API Gateway
         
         #v(1em)
         
         #text(size: 10pt, weight: "bold", fill: accent)[ALGORITHMS]
         #v(0.4em)
         
-        [ • Competitive Programming]
-        [ • Dynamic Programming]
-        [ • Graph Theory]
-        [ • Data Structures]
+        • Competitive Programming\
+        • Dynamic Programming\
+        • Graph Theory\
+        • Data Structures
       ]
     )
     
@@ -227,7 +261,7 @@
           weight: "bold",
           tracking: 0.15em,
           fill: accent,
-        )[AWARDS]
+        )[🏆 AWARDS]
         
         #v(0.8em)
         #line(length: 2cm, stroke: 0.5pt + accent)
@@ -270,7 +304,7 @@
           weight: "bold",
           tracking: 0.15em,
           fill: accent,
-        )[PROFILE]
+        )[👤 PROFILE]
         
         #v(0.8em)
         #line(length: 100%, stroke: 0.5pt + divider)
@@ -282,7 +316,7 @@
       ]
     )
     
-    // EXPERIENCE Section
+    // EXPERIENCE Section with Timeline
     #block(
       above: 0em,
       [
@@ -291,7 +325,7 @@
           weight: "bold",
           tracking: 0.15em,
           fill: accent,
-        )[EXPERIENCE]
+        )[💼 EXPERIENCE]
         
         #v(0.8em)
         #line(length: 100%, stroke: 0.5pt + divider)
@@ -301,6 +335,8 @@
         #block(
           below: 1.5em,
           [
+            #timeline_item(height: 29em)
+            
             #grid(
               columns: (1fr, auto),
               [
@@ -324,17 +360,12 @@
             
             #set text(size: 9pt)
             
-            [ • Built comprehensive REST API endpoints for software campaign management using Spring Boot microservices with proper error handling, logging, and validation]
-            
-            [ • Implemented device software upgrade features with retry mechanisms and timeout handling for NT/LT board reachability verification across distributed network infrastructure]
-            
-            [ • Automated testing workflows using Robot Framework achieving 200+ test cases with 85% code coverage, reducing manual testing effort by 70%]
-            
-            [ • Optimized Jenkins CI/CD pipelines reducing build time by 30% through Maven caching strategies and parallel execution across multiple test suites]
-            
-            [ • Integrated XGBoost ML model with n8n workflows for automated test failure pattern detection and root cause analysis]
-            
-            [ • Collaborated with cross-functional teams using Agile methodologies, participating in sprint planning, daily standups, and code reviews]
+            • Built comprehensive REST API endpoints for software campaign management using Spring Boot microservices with proper error handling, logging, and validation\
+            • Implemented device software upgrade features with retry mechanisms and timeout handling for NT/LT board reachability verification across distributed network infrastructure\
+            • Automated testing workflows using Robot Framework achieving 200+ test cases with 85% code coverage, reducing manual testing effort by 70%\
+            • Optimized Jenkins CI/CD pipelines reducing build time by 30% through Maven caching strategies and parallel execution across multiple test suites\
+            • Integrated XGBoost ML model with n8n workflows for automated test failure pattern detection and root cause analysis\
+            • Collaborated with cross-functional teams using Agile methodologies, participating in sprint planning, daily standups, and code reviews
             
             #v(0.5em)
             #text(size: 8.5pt, fill: secondary, style: "italic")[
@@ -347,6 +378,8 @@
         #block(
           below: 1.5em,
           [
+            #timeline_item(height: 20em)
+            
             #grid(
               columns: (1fr, auto),
               [
@@ -357,94 +390,96 @@
               ]
             )
             
-            #v(0.3em)
-            #text(size: 10pt, fill: secondary)[FPT Software | Ho Chi Minh City]
+                #v(0.3em)
+                #text(size: 10pt, fill: secondary)[FPT Software | Ho Chi Minh City]
+                
+                #v(0.8em)
+                
+                #set text(size: 9.5pt, fill: secondary)
+                
+                Developed medical imaging software for ultrasound analysis focusing on vascular measurement tools and performance optimization.
+                
+                #v(0.6em)
+                
+                #set text(size: 9pt)
+                
+                • Implemented measurement and annotation features for blood flow analysis, vessel sizing, and wall thickness detection in medical imaging applications\
+                • Optimized application performance by offloading heavy I/O operations from UI thread, reducing startup time by 40% and improving responsiveness\
+                • Restructured API response formats to meet specific client requirements, ensuring efficient data delivery and seamless frontend integration
+                
+                #v(0.5em)
+                #text(size: 8.5pt, fill: secondary, style: "italic")[
+                  Tech Stack: C++, C\#, WPF, ASP.NET Core
+                ]
+              ]
+            )
+            
+            // PROJECTS Subsection
+            #v(1em)
+            #text(
+              size: 10pt,
+              weight: "bold",
+              tracking: 0.1em,
+              fill: accent,
+            )[📁 SELECTED PROJECTS]
             
             #v(0.8em)
             
-            #set text(size: 9.5pt, fill: secondary)
-            
-            Developed medical imaging software for ultrasound analysis focusing on vascular measurement tools and performance optimization.
-            
-            #v(0.6em)
-            
-            #set text(size: 9pt)
-            
-            [ • Implemented measurement and annotation features for blood flow analysis, vessel sizing, and wall thickness detection in medical imaging applications]
-            
-            [ • Optimized application performance by offloading heavy I/O operations from UI thread, reducing startup time by 40% and improving responsiveness]
-            
-            [ • Restructured API response formats to meet specific client requirements, ensuring efficient data delivery and seamless frontend integration]
-            
-            #v(0.5em)
-            #text(size: 8.5pt, fill: secondary, style: "italic")[
-              Tech Stack: C++, C\#, WPF, ASP.NET Core
-            ]
-          ]
-        )
-        
-        // PROJECTS Subsection
-        #v(1em)
-        #text(
-          size: 10pt,
-          weight: "bold",
-          tracking: 0.1em,
-          fill: accent,
-        )[SELECTED PROJECTS]
-        
-        #v(0.8em)
-        
-        // Project 1
-        #block(
-          below: 1.2em,
-          [
-            #grid(
-              columns: (1fr, auto),
+            // Project 1
+            #block(
+              below: 1.2em,
               [
-                #text(size: 10pt, weight: "bold", fill: accent)[Huynh Hanh Financial Management]
-              ],
-              [
-                #text(size: 9pt, fill: secondary, style: "italic")[Aug 2024 - Feb 2025]
+                #timeline_item(height: 7em)
+                
+                #grid(
+                  columns: (1fr, auto),
+                  [
+                    #text(size: 10pt, weight: "bold", fill: accent)[Huynh Hanh Financial Management]
+                  ],
+                  [
+                    #text(size: 9pt, fill: secondary, style: "italic")[Aug 2024 - Feb 2025]
+                  ]
+                )
+                
+                #v(0.5em)
+                #set text(size: 9pt, fill: secondary)
+                
+                • Full-stack agricultural operations platform with AI chatbot integration using PhoBERT for Vietnamese NLP\
+                • Built real-time truck weighing system with Web Serial API, data storage, receipt printing, and report export\
+                • Developed crop lifecycle management with 3D GPS visualization for planting area tracking
+                
+                #v(0.3em)
+                #text(size: 8.5pt, style: "italic")[ASP.NET Core, React.js, Electron.js, Material UI, Docker]
               ]
             )
             
-            #v(0.5em)
-            #set text(size: 9pt, fill: secondary)
-            
-            [ • Full-stack agricultural operations platform with AI chatbot integration using PhoBERT for Vietnamese NLP]
-            [ • Built real-time truck weighing system with Web Serial API, data storage, receipt printing, and report export]
-            [ • Developed crop lifecycle management with 3D GPS visualization for planting area tracking]
-            
-            #v(0.3em)
-            #text(size: 8.5pt, style: "italic")[ASP.NET Core, React.js, Electron.js, Material UI, Docker]
-          ]
-        )
-        
-        // Project 2
-        #block(
-          below: 1.2em,
-          [
-            #grid(
-              columns: (1fr, auto),
+            // Project 2
+            #block(
+              below: 1.2em,
               [
-                #text(size: 10pt, weight: "bold", fill: accent)[SmartMicro IoT Platform]
-              ],
-              [
-                #text(size: 9pt, fill: secondary, style: "italic")[Feb 2024 - Apr 2024]
+                #timeline_item(height: 6em)
+                
+                #grid(
+                  columns: (1fr, auto),
+                  [
+                    #text(size: 10pt, weight: "bold", fill: accent)[SmartMicro IoT Platform]
+                  ],
+                  [
+                    #text(size: 9pt, fill: secondary, style: "italic")[Feb 2024 - Apr 2024]
+                  ]
+                )
+                
+                #v(0.5em)
+                #set text(size: 9pt, fill: secondary)
+                
+                • Mobile IoT platform for smart home device management with voice control capabilities\
+                • Connected BLE devices via GATT/UART protocols for real-time device control\
+                • Integrated OpenAI API with Flutter TTS for voice-activated home automation
+                
+                #v(0.3em)
+                #text(size: 8.5pt, style: "italic")[Flutter, GetX, ASP.NET Core, SignalR, OpenAI API]
               ]
             )
-            
-            #v(0.5em)
-            #set text(size: 9pt, fill: secondary)
-            
-            [ • Mobile IoT platform for smart home device management with voice control capabilities]
-            [ • Connected BLE devices via GATT/UART protocols for real-time device control]
-            [ • Integrated OpenAI API with Flutter TTS for voice-activated home automation]
-            
-            #v(0.3em)
-            #text(size: 8.5pt, style: "italic")[Flutter, GetX, ASP.NET Core, SignalR, OpenAI API]
-          ]
-        )
       ]
     )
   ]

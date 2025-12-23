@@ -13,31 +13,15 @@
 #let font_base = 8.5pt                // Base font size
 #let font_name = 21.5pt             // Name in header
 #let font_job_title = 9pt          // Job title in header
-#let font_section = 11pt            // Section headers: CONTACT, EDUCATION, etc.
-#let font_subsection = 9pt          // Subsection titles: BACKEND, project names, etc.
+#let font_section = 12pt            // Section headers: CONTACT, EDUCATION, etc.
+#let font_subsection = 10pt          // Subsection titles: BACKEND, project names, etc.
 #let font_body = 8.5pt              // Body text and descriptions
 #let font_detail = 8pt              // Detail text: dates, locations, contact info
 #let font_small = 7.5pt             // Small text: tech stack, footer
 
-
-// ==============================================================================
-// PAGE & TEXT CONFIGURATION
-// ==============================================================================
-
-#set page(
-  paper: "a4",
-  margin: (x: 1.5cm, y: 2cm),
-  fill: rgb("#f5f5f5"),
-)
-
-#set text(
-  font: "New Computer Modern",
-  size: font_base,
-  fill: rgb("#2d2d2d"),
-)
-
-#set par(justify: true, leading: 0.7em)
-
+#let font_computer = "New Computer Modern"
+#let font_crimson = "Crimson Pro"
+#let font_display = "Playfair Display"
 // ==============================================================================
 // COLOR SCHEME
 // ==============================================================================
@@ -48,33 +32,48 @@
 #let divider = rgb("#d0d0d0")       // Light divider
 #let text_color = rgb("#2d2d2d")      // Main text color
 #let timeline_color = secondary     // Timeline color
+#let background_color = rgb("#f5f5f5")
+
+
+// ==============================================================================
+// PAGE & TEXT CONFIGURATION
+// ==============================================================================
+
+#set page(
+  paper: "a4",
+  margin: (x: 1.5cm, y: 2cm),
+  fill: background_color,
+)
+
+#set text(
+  font: font_crimson,
+  size: font_base,
+  fill: rgb("#2d2d2d"),
+)
+
+#set par(justify: true, leading: 0.7em)
+
 
 // ==============================================================================
 // TIMELINE COMPONENTS
 // ==============================================================================
 
 // Timeline dot component
-#let timeline_dot(color: timeline_color) = {
-  circle(radius: 2.5pt, fill: color)
+#let dot(color: timeline_color) = {
+  circle(radius: 1.5pt, fill: color)
 }
 
 // Timeline item with dot and vertical line
-#let timeline_item(
-  height: 10em,
-  color: timeline_color,
-  dx: -0.77cm,
-  dy_dot: 0.1em,
-  dy_line: 2em,
-) = {
+#let timeline_item(height: 10em, color: timeline_color, dx: -0.7cm, dy_dot: 0.15em, dx_dot: 0.13em, dy_line: 2em) = {
   // Dot
-  place(left + top, dx: dx, dy: dy_dot, timeline_dot(color: color))
+  place(left + top, dx: dx + dx_dot, dy: dy_dot, dot(color: color))
 
   // Vertical line
   place(
     left + top,
-    dx: dx + 0.075cm,
+    dx: dx + 0.085cm,
     dy: dy_line,
-    box(width: 1pt, height: height, fill: color),
+    box(width: 0.5pt, height: height, fill: color),
   )
 }
 
@@ -86,6 +85,13 @@
   width: 100%,
   [
     // Background initial letter with primary color
+    // Red horizontal line after "Software Engineer"
+    #place(
+      top + left,
+      dx: 4cm,
+      dy: 1.5cm,
+      line(length: 100% - 4.4cm, stroke: 20pt + primary.lighten(70%)),
+    )
     #place(
       top + left,
       dx: -0.3cm,
@@ -94,16 +100,19 @@
         size: 110pt,
         fill: primary.lighten(50%), // Soft blue, very light
         weight: "bold",
-        font: "New Computer Modern",
-      )[H#text(size: 10pt, fill: secondary, weight: "bold", font: "New Computer Modern")[#h(2.5em)Software Engineer]],
+        font: font_computer,
+      )[H#text(size: 10pt, fill: accent, weight: "bold", font: "New Computer Modern")[#h(2.5em)Software Engineer]
+        #text(size: 30pt, fill: background_color, weight: "bold", font: "New Computer Modern")[#h(4.4em)Jiner😎]
+
+      ],
     )
 
     // Vertical divider line
     #place(
       top + left,
       dx: 3.8cm,
-      dy: -0.6cm,
-      line(length: 2.5cm, stroke: 1pt + primary.lighten(30%), angle: 90deg),
+      dy: -0.8cm,
+      line(length: 2.7cm, stroke: 2pt + primary.lighten(50%), angle: 90deg),
     )
 
     #v(.8cm)
@@ -113,7 +122,8 @@
       size: font_name,
       weight: "bold",
       fill: accent,
-      tracking: 0.15em,
+      font: font_display,
+      tracking: 0.23em,
     )[Nguyen Manh Hung]
     #v(0.1cm)
     // Job title
@@ -123,7 +133,7 @@
       fill: secondary,
       // tracking: 0.05em,
     )[With 2+ years of experience in enterprise Java and backend engineering, Integrating AI into scalable systems. \
-    ICPC medalist, currently developing large-scale Fixed Network Management Systems at work.]
+      ICPC medalist, currently developing large-scale Fixed Network Management Systems at work.]
   ],
 )
 
@@ -146,13 +156,6 @@
       above: 0em,
       below: 1.5em,
       [
-        #text(
-          size: font_section,
-          weight: "bold",
-          tracking: 0.15em,
-          fill: accent,
-        )[#box(baseline: 15%)[#lucide-icon("wifi")] CONTACT]
-
         #v(0.5em)
         #line(length: 2cm, stroke: 0.5pt + accent)
         #v(0.7em)
@@ -167,8 +170,7 @@
           [#lucide-icon("mail", size: 7pt)], [#link("mailto:nmhung.works@gmail.com")[nmhung.works\@gmail.com]],
           [#lucide-icon("map-pin", size: 7pt)], [Ho Chi Minh City, Vietnam],
           [#lucide-icon("phone", size: 7pt)], [#link("tel:+84947339718")[+84 947 339 718]],
-          [#lucide-icon("linkedin", size: 7pt)],
-          [#link("https://linkedin.com/in/jinergenkai")[linkedin.com/in/jinergenkai]],
+          // [#lucide-icon("linkedin", size: 7pt)], [#link("https://linkedin.com/in/jinergenkai")[linkedin.com/in/jinergenkai]],
 
           [#lucide-icon("github", size: 7pt)], [#link("https://github.com/jinergenkai")[github.com/jinergenkai]],
         )
@@ -345,20 +347,20 @@
           tracking: 0.15em,
           fill: accent,
         )[#box(baseline: 15%)[#lucide-icon("briefcase")] EXPERIENCE]
-
-        #v(0.5em)
+        // #v(-0.7em)
         #line(length: 100%, stroke: 0.5pt + divider)
-        #v(0.7em)
+        // #v(0.7em)
 
         // Nokia Position
         #block(
           below: 1.5em,
           [
-            #timeline_item(height: 25em)
+            #timeline_item(height: 23em)
 
             #grid(
               columns: (1fr, auto),
-              [#text(size: font_subsection, weight: "bold", fill: accent)[SOFTWARE ENGINEER - FNMS TEAM]],
+            //   [#text(size: font_subsection, weight: "bold", fill: accent)[SOFTWARE ENGINEER - FNMS TEAM]],
+              [#text(size: font_subsection, weight: "bold", fill: accent)[Software Engineer - FNMS Team]],
               [#text(size: font_detail, fill: secondary, style: "italic")[Apr 2024 - Present]],
             )
 
@@ -391,11 +393,12 @@
         #block(
           below: 1.5em,
           [
-            #timeline_item(height: 20em)
+            #timeline_item(height: 15em)
 
             #grid(
               columns: (1fr, auto),
-              [#text(size: font_subsection, weight: "bold", fill: accent)[SOFTWARE ENGINEER - ALOKA TEAM]],
+            //   [#text(size: font_subsection, weight: "bold", fill: accent)[SOFTWARE ENGINEER - ALOKA TEAM]],
+              [#text(size: font_subsection, weight: "bold", fill: accent)[Software Engineer - Aloka Team]],
               [#text(size: font_detail, fill: secondary, style: "italic")[Aug 2023 - Apr 2024]],
             )
 

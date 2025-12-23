@@ -41,7 +41,7 @@
 
 #set page(
   paper: "a4",
-  margin: (x: 1.5cm, y: 2cm),
+  margin: (x: 1.5cm, bottom: 0.5cm, top: 2cm),
   fill: background_color,
 )
 
@@ -176,7 +176,7 @@
         )
       ],
     )
-
+    #v(1em)
     // EDUCATION SECTION
     #block(
       above: 0em,
@@ -188,42 +188,34 @@
           tracking: 0.15em,
           fill: accent,
         )[#box(baseline: 15%)[#lucide-icon("graduation-cap")] EDUCATION]
-
-        #v(0.5em)
-        #line(length: 2cm, stroke: 0.5pt + accent)
-        #v(0.7em)
+        #v(-0.7em)
+        #line(length: 3.4cm, stroke: 0.5pt + accent)
 
         // Bachelor Degree
         #block(
-          below: 1.2em,
           [
-            #text(size: font_subsection, weight: "bold", fill: accent)[BACHELOR DEGREE]
-            #v(0.3em)
-            #text(size: font_detail, fill: secondary)[FPT University HCMC]
-            #v(0.2em)
-            #text(size: font_detail, fill: secondary)[Information Technology]
-            #v(0.2em)
-            #text(size: font_small, fill: secondary, style: "italic")[2020 - 2024 • GPA 8.0/10]
+            #text(size: font_subsection, weight: "bold", fill: accent)[• Bachelor of IT]
+
+            #text(size: font_detail, fill: secondary)[FPT University, HCMC]
+
+            #text(size: font_small, fill: secondary, style: "italic")[2020 - 2024 • GPA 3.2/4.0]
           ],
         )
 
         // Gifted Program
         #block(
-          below: 1.2em,
           [
-            #text(size: font_subsection, weight: "bold", fill: accent)[GIFTED PROGRAM]
-            #v(0.3em)
-            #text(size: font_detail, fill: secondary)[Nguyen Du High School for Gift]
-            #v(0.2em)
-            #text(size: font_detail, fill: secondary)[Informatics]
-            #v(0.2em)
+            #text(size: font_subsection, weight: "bold", fill: accent)[• High School for the Gifted]
+
+            #text(size: font_detail, fill: secondary)[Nguyen Du High School (Informatics)]
+
             #text(size: font_small, fill: secondary, style: "italic")[2017 - 2020]
           ],
         )
       ],
     )
-
-    // SKILLS SECTION
+    #v(1em)
+    // AWARDS SECTION
     #block(
       above: 0em,
       below: 1.5em,
@@ -233,78 +225,9 @@
           weight: "bold",
           tracking: 0.15em,
           fill: accent,
-        )[#box(baseline: 15%)[#lucide-icon("bow-arrow")] SKILLS]
-
-        #v(0.5em)
-        #line(length: 2cm, stroke: 0.5pt + accent)
-        #v(0.7em)
-
-        #set text(size: font_detail, fill: secondary)
-
-        // Backend Skills
-        #text(size: font_subsection, weight: "bold", fill: accent)[BACKEND]
-        #v(0.4em)
-        • Java & Spring Boot\
-        • C\# & ASP.NET Core\
-        • RESTful API Design\
-        • Maven & Microservices
-
-        #v(1em)
-
-        // Testing & CI/CD Skills
-        #text(size: font_subsection, weight: "bold", fill: accent)[TESTING & CI/CD]
-        #v(0.4em)
-        • Robot Framework\
-        • JUnit & Integration Tests\
-        • Jenkins Pipelines\
-        • GitHub Actions
-
-        #v(1em)
-
-        // Frontend Skills
-        #text(size: font_subsection, weight: "bold", fill: accent)[FRONTEND]
-        #v(0.4em)
-        • Angular & React.js\
-        • TypeScript\
-        • Flutter Mobile\
-        • TailwindCSS
-
-        #v(1em)
-
-        // DevOps & Tools
-        #text(size: font_subsection, weight: "bold", fill: accent)[DEVOPS & TOOLS]
-        #v(0.4em)
-        • Kubernetes & Docker\
-        • PostgreSQL & Redis\
-        • Git & Version Control\
-        • Kong API Gateway
-
-        #v(1em)
-
-        // Algorithms Skills
-        #text(size: font_subsection, weight: "bold", fill: accent)[ALGORITHMS]
-        #v(0.4em)
-        • Competitive Programming\
-        • Dynamic Programming\
-        • Graph Theory\
-        • Data Structures
-      ],
-    )
-
-    // AWARDS SECTION
-    #block(
-      above: 0em,
-      [
-        #text(
-          size: font_section,
-          weight: "bold",
-          tracking: 0.15em,
-          fill: accent,
         )[#box(baseline: 15%)[#lucide-icon("award")] AWARDS]
-
-        #v(0.5em)
-        #line(length: 2cm, stroke: 0.5pt + accent)
-        #v(0.7em)
+        #v(-0.7em)
+        #line(length: 2.6cm, stroke: 0.5pt + accent)
 
         #set text(size: font_detail, fill: secondary)
 
@@ -314,7 +237,7 @@
         ]
 
         #block(below: 0.8em)[
-          • *Meta Hacker Cup 2024*\
+          • *Meta Hacker Cup 2025*\
           #h(0.5em) Round 2 - Top 12% Global
         ]
 
@@ -329,6 +252,59 @@
         ]
       ],
     )
+    #v(1em)
+
+    // SKILLS SECTION
+    #block(
+      above: 0em,
+      below: 1.5em,
+      [
+        #text(
+          size: font_section,
+          weight: "bold",
+          tracking: 0.15em,
+          fill: accent,
+        )[#box(baseline: 15%)[#lucide-icon("bow-arrow")] SKILLS]
+        #v(-0.7em)
+        #line(length: 2.2cm, stroke: 0.5pt + accent)
+
+        #set text(size: font_detail, fill: secondary)
+
+        // Backend Skills
+        #text(size: font_subsection, weight: "bold", fill: accent)[BACKEND]
+
+        • Java & Spring Boot\
+        • Maven & Microservices
+
+
+        // Algorithms Skills
+        #text(size: font_subsection, weight: "bold", fill: accent)[ALGORITHMS]
+
+        • Competitive Programming\
+        • Dynamic Programming\
+        • Graph Theory\
+        • Data Structures
+
+
+        // DevOps & Tools
+        #text(size: font_subsection, weight: "bold", fill: accent)[DEVOPS]
+
+        • AWS Cloud Services (EC2, S3)\
+        • Kubernetes & Docker\
+        • PostgreSQL & Redis\
+        • Robot Framework\
+        • Jenkins Pipelines\
+
+        // Frontend Skills
+        #text(size: font_subsection, weight: "bold", fill: accent)[FRONTEND]
+
+        • Flutter Mobile\
+        • Angular & React.js\
+        • TypeScript\
+      ],
+    )
+    #v(3.1em)
+
   ],
 
   // ============================================================================
@@ -359,7 +335,7 @@
 
             #grid(
               columns: (1fr, auto),
-            //   [#text(size: font_subsection, weight: "bold", fill: accent)[SOFTWARE ENGINEER - FNMS TEAM]],
+              //   [#text(size: font_subsection, weight: "bold", fill: accent)[SOFTWARE ENGINEER - FNMS TEAM]],
               [#text(size: font_subsection, weight: "bold", fill: accent)[Software Engineer - FNMS Team]],
               [#text(size: font_detail, fill: secondary, style: "italic")[Apr 2024 - Present]],
             )
@@ -397,7 +373,6 @@
 
             #grid(
               columns: (1fr, auto),
-            //   [#text(size: font_subsection, weight: "bold", fill: accent)[SOFTWARE ENGINEER - ALOKA TEAM]],
               [#text(size: font_subsection, weight: "bold", fill: accent)[Software Engineer - Aloka Team]],
               [#text(size: font_detail, fill: secondary, style: "italic")[Aug 2023 - Apr 2024]],
             )
@@ -423,19 +398,16 @@
             ]
           ],
         )
+        #v(1.5em)
 
         // PROJECTS SUBSECTION
-        #v(1em)
         #text(
           size: font_subsection,
           weight: "bold",
           tracking: 0.1em,
           fill: accent,
-        )[#box(baseline: 15%)[#lucide-icon("user")] SELECTED PROJECTS]
-
-        #v(0.5em)
+        )[#box(baseline: 15%)[#lucide-icon("user")] PROJECTS]
         #line(length: 100%, stroke: 0.5pt + divider)
-        #v(0.7em)
 
         // Project 1: Huynh Hanh Financial Management
         #block(
@@ -445,15 +417,19 @@
 
             #grid(
               columns: (1fr, auto),
-              [#text(size: font_subsection, weight: "bold", fill: accent)[Huynh Hanh Financial Management]],
+              [#text(size: font_subsection, weight: "bold", fill: accent)[#link(
+                "https://huynhhanh.com",
+              )[Huynh Hanh Financial Management]]],
               [#text(size: font_detail, fill: secondary, style: "italic")[Aug 2024 - Feb 2025]],
             )
+            #v(0.2em)
+            #text(size: font_small, fill: primary)[#link("https://huynhhanh.com")[→ huynhhanh.com]]
 
             #v(0.5em)
             #set text(size: font_detail, fill: secondary)
 
-            • Full-stack agricultural operations platform with AI chatbot integration using PhoBERT for Vietnamese NLP\
-            • Built real-time truck weighing system with Web Serial API, data storage, receipt printing, and report export\
+            • Full-stack agricultural platform with AI chatbot integration using PhoBERT for Vietnamese NLP\
+            • Built real-time truck weighing system with Web Serial API, receipt printing, and report export\
             • Developed crop lifecycle management with 3D GPS visualization for planting area tracking
 
             #v(0.3em)
@@ -469,6 +445,7 @@
 
             #grid(
               columns: (1fr, auto),
+              // TODO: Add github link
               [#text(size: font_subsection, weight: "bold", fill: accent)[SmartMicro IoT Platform]],
               [#text(size: font_detail, fill: secondary, style: "italic")[Feb 2024 - Apr 2024]],
             )
@@ -493,10 +470,9 @@
 // FOOTER
 // ==============================================================================
 
-#v(1cm)
-
+#let today = datetime.today()
 #align(center)[
   #text(size: font_small, fill: secondary)[
-    Portfolio: jine.blog • Updated December 2024
+    Portfolio updated on #today.display("[month repr:long] [day], [year]")
   ]
 ]

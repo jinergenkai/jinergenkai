@@ -102,7 +102,12 @@
         weight: "bold",
         font: font_computer,
       )[H#text(size: 10pt, fill: accent, weight: "bold", font: "New Computer Modern")[#h(2.5em)Software Engineer]
-        #text(size: 30pt, fill: background_color, weight: "bold", font: "New Computer Modern")[#h(4.4em)Jiner😎]
+        #text(
+          size: 30pt,
+          fill: background_color,
+          weight: "bold",
+          font: "New Computer Modern",
+        )[#h(4.7em)Jiner#box(baseline: 15%, image("assets/smille-sunglasses.svg", height: 1em))]
 
       ],
     )

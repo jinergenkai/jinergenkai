@@ -198,23 +198,30 @@
 
         // Bachelor Degree
         #block(
+          below: 1.2em,
           [
-            #text(size: font_subsection, weight: "bold", fill: accent)[• Bachelor of IT]
-
+            #grid(
+              columns: (1fr, auto),
+              [#text(size: font_detail, weight: "bold", fill: accent)[• Bachelor of IT]],
+              pad(right: 3.5em)[#align(right)[#text(size: font_small, fill: secondary, style: "italic")[2020 - 2024]]],
+            )
+            #v(-0.2em)
             #text(size: font_detail, fill: secondary)[FPT University, HCMC]
-
-            #text(size: font_small, fill: secondary, style: "italic")[2020 - 2024 • GPA 3.2/4.0]
+            #v(-0.1em)
+            #text(size: font_small, fill: secondary, style: "italic")[GPA 3.2/4.0 • 100% Scholarship]
           ],
         )
 
         // Gifted Program
         #block(
           [
-            #text(size: font_subsection, weight: "bold", fill: accent)[• High School for the Gifted]
-
+            #grid(
+              columns: (1fr, auto),
+              [#text(size: font_detail, weight: "bold", fill: accent)[• High School for Gifted]],
+              pad(right: 3.5em)[#align(right)[#text(size: font_small, fill: secondary, style: "italic")[2017 - 2020]]],
+            )
+            #v(-0.2em)
             #text(size: font_detail, fill: secondary)[Nguyen Du High School (Informatics)]
-
-            #text(size: font_small, fill: secondary, style: "italic")[2017 - 2020]
           ],
         )
       ],
@@ -236,24 +243,24 @@
 
         #set text(size: font_detail, fill: secondary)
 
-        #block(below: 0.8em)[
-          • *ICPC 2023* - Third Prize\
-          #h(0.5em) Vietnam Southern Region
+        #block(below: 1.1em)[
+          #link("https://huynhhanh.com")[• *ICPC 2023* - Third Prize\
+          #h(0.5em) Vietnam Southern Region #box(baseline: 15%)[#text(fill: primary)[#lucide-icon("external-link", size: 7pt)]]]
         ]
 
-        #block(below: 0.8em)[
-          • *Meta Hacker Cup 2025*\
-          #h(0.5em) Round 2 - Top 12% Global
+        #block(below: 1.1em)[
+          #link("https://huynhhanh.com")[• *Meta Hacker Cup 2025*\
+          #h(0.5em) Round 2 - Top 12% Global #box(baseline: 15%)[#text(fill: primary)[#lucide-icon("external-link", size: 7pt)]]]
         ]
 
-        #block(below: 0.8em)[
-          • *ICPC 2021* - Honorable Mention\
-          #h(0.5em) Vietnam National
+        #block(below: 1.1em)[
+          #link("https://huynhhanh.com")[• *ICPC 2021* - Honorable Mention\
+          #h(0.5em) Vietnam National #box(baseline: 15%)[#text(fill: primary)[#lucide-icon("external-link", size: 7pt)]]]
         ]
 
-        #block(below: 0.8em)[
-          • *National High School 2020*\
-          #h(0.5em) Informatics - Honorable Mention
+        #block(below: 1.1em)[
+          #link("https://huynhhanh.com")[• *National Excellent Student 2020*\
+          #h(0.5em) Informatics - Honorable Mention #box(baseline: 15%)[#text(fill: primary)[#lucide-icon("external-link", size: 7pt)]]]
         ]
       ],
     )
@@ -332,40 +339,62 @@
         #line(length: 100%, stroke: 0.5pt + divider)
         // #v(0.7em)
 
-        // Nokia Position
+        // TMA Solutions Position
         #block(
           below: 1.5em,
           [
-            #timeline_item(height: 23em)
+            #timeline_item(height: 35em)
 
             #grid(
               columns: (1fr, auto),
-              //   [#text(size: font_subsection, weight: "bold", fill: accent)[SOFTWARE ENGINEER - FNMS TEAM]],
-              [#text(size: font_subsection, weight: "bold", fill: accent)[Software Engineer - FNMS Team]],
+              [#text(size: font_subsection, weight: "bold", fill: accent)[TMA Solutions - Backend Engineer]],
               [#text(size: font_detail, fill: secondary, style: "italic")[Apr 2024 - Present]],
             )
 
-            #v(0.3em)
-            #text(size: font_body, fill: secondary)[Nokia | Ho Chi Minh City]
+            // #v(0.3em)
+            // #text(size: font_body, fill: secondary)[Ho Chi Minh City]
             #v(0.8em)
+
+            // Sub-project 1: Nokia Altiplano
+            #text(size: font_body, weight: "bold", fill: accent)[→ Nokia Altiplano - Access Controller Team]
+            #v(0.4em)
 
             #set text(size: font_body, fill: secondary)
 
-            Developed Fixed Network Management System (FNMS) for optical network device management using enterprise Java technologies. Led implementation of device software upgrade campaigns and automated testing infrastructure.
+            Designed and implemented campaign management system within Nokia Altiplano platform, enabling orchestrated firmware upgrades across distributed optical network infrastructure.
 
-            #v(0.6em)
+            #v(0.4em)
             #set text(size: font_detail)
 
-            • Built comprehensive REST API endpoints for software campaign management using Spring Boot microservices with proper error handling, logging, and validation\
-            • Implemented device software upgrade features with retry mechanisms and timeout handling for NT/LT board reachability verification across distributed network infrastructure\
-            • Automated testing workflows using Robot Framework achieving 200+ test cases with 85% code coverage, reducing manual testing effort by 70%\
-            • Optimized Jenkins CI/CD pipelines reducing build time by 30% through Maven caching strategies and parallel execution across multiple test suites\
-            • Integrated XGBoost ML model with n8n workflows for automated test failure pattern detection and root cause analysis\
-            • Collaborated with cross-functional teams using Agile methodologies, participating in sprint planning, daily standups, and code reviews
+            • Designed bulk device upgrade orchestration with parallel execution, retry mechanisms, and failure recovery for NT/LT board reachability across distributed network topology NETCONF/YANG\
+            • Owned Build Police responsibilities for 20+ member cross-regional team (Vietnam/India), managing Jenkins pipeline stability, analyzing test failures via Kibana, monitoring system health through Prometheus/Grafana, and coordinating infrastructure issues with DevOps\
+            • Contributed to event streaming migration from JMS to Kafka for inter-domain communication between AC and IBN services
 
-            #v(0.5em)
+            #v(0.4em)
             #text(size: font_small, fill: secondary, style: "italic")[
-              Tech Stack: Java, Spring Boot, Angular, Robot Framework, Maven, Kubernetes, Jenkins, PostgreSQL
+              Tech: Java, Spring Boot, Angular, Kafka, Helm, Kubernetes, Jenkins, Robot Framework, ELK, Prometheus, Grafana
+            ]
+
+            #v(0.8em)
+
+            // Sub-project 2: Agentic Vision
+            #text(size: font_body, weight: "bold", fill: accent)[→ Agentic Vision - AI-Powered Security Platform]
+            #v(0.4em)
+
+            #set text(size: font_body, fill: secondary)
+
+            Built backend infrastructure for AI-powered security monitoring platform, now deployed for enterprise clients including Novaland.
+
+            #v(0.4em)
+            #set text(size: font_detail)
+
+            • Developed FastAPI backend orchestrating AI inference service for real-time violation detection across 50+ cameras, with automated alerting via Zalo OA and email\
+            • Implemented core platform services including notification system, license management, image storage with MinIO, and caching layer for AI model responses\
+            • Collaborated with AI team on service contract design and integration patterns for custom security use-cases and workflow
+
+            #v(0.4em)
+            #text(size: font_small, fill: secondary, style: "italic")[
+              Tech: Python, FastAPI, React, Docker
             ]
           ],
         )
@@ -378,12 +407,12 @@
 
             #grid(
               columns: (1fr, auto),
-              [#text(size: font_subsection, weight: "bold", fill: accent)[Software Engineer - Aloka Team]],
+              [#text(size: font_subsection, weight: "bold", fill: accent)[FPT Software - Software Engineer]],
               [#text(size: font_detail, fill: secondary, style: "italic")[Aug 2023 - Apr 2024]],
             )
 
-            #v(0.3em)
-            #text(size: font_body, fill: secondary)[FPT Software | Ho Chi Minh City]
+            // #v(0.3em)
+            // #text(size: font_body, fill: secondary)[Ho Chi Minh City]
             #v(0.8em)
 
             #set text(size: font_body, fill: secondary)

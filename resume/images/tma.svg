@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100">
+  <!-- TMA text -->
+  <text x="10" y="55" font-size="60" font-family="Arial, Helvetica, sans-serif" fill="#3aa3e3" font-weight="bold">
+    TMA
+  </text>
+
+  <!-- solutions text -->
+  <text x="15" y="85" font-size="22" font-family="Arial, Helvetica, sans-serif" fill="#333">
+    solutions
+  </text>
+
+  <!-- circle arc -->
+  <circle cx="230" cy="50" r="35" fill="none" stroke="#3aa3e3" stroke-width="5"/>
+
+  <!-- globe -->
+  <circle cx="230" cy="50" r="18" fill="#c9c9c9"/>
+</svg>

@@ -7,31 +7,32 @@
 
 
 // ==============================================================================
-// FONT SIZES - Giảm toàn bộ để tạo khoảng trống
+// FONT SIZES
 // ==============================================================================
 
 #let font_base = 8.5pt                // Base font size
-#let font_name = 21.5pt             // Name in header
-#let font_job_title = 9pt          // Job title in header
-#let font_section = 12pt            // Section headers: CONTACT, EDUCATION, etc.
-#let font_subsection = 10pt          // Subsection titles: BACKEND, project names, etc.
-#let font_body = 8.5pt              // Body text and descriptions
-#let font_detail = 8pt              // Detail text: dates, locations, contact info
-#let font_small = 7.5pt             // Small text: tech stack, footer
+#let font_name = 21.5pt              // Name in header
+#let font_job_title = 9pt            // Job title in header
+#let font_section = 12pt             // Section headers
+#let font_subsection = 10pt          // Subsection titles
+#let font_body = 8.5pt               // Body text
+#let font_detail = 8pt               // Detail text
+#let font_small = 7.5pt              // Small text
 
 #let font_computer = "New Computer Modern"
 #let font_crimson = "Crimson Pro"
 #let font_display = "Playfair Display"
+
 // ==============================================================================
 // COLOR SCHEME
 // ==============================================================================
 
-#let primary = rgb("#a8c5dd")       // Soft blue accent
-#let secondary = rgb("#5a5a5a")     // Medium gray
-#let accent = rgb("#1a1a1a")        // Dark text
-#let divider = rgb("#d0d0d0")       // Light divider
-#let text_color = rgb("#2d2d2d")      // Main text color
-#let timeline_color = secondary     // Timeline color
+#let primary = rgb("#a8c5dd")        // Soft blue accent
+#let secondary = rgb("#5a5a5a")      // Medium gray
+#let accent = rgb("#1a1a1a")         // Dark text
+#let divider = rgb("#d0d0d0")        // Light divider
+#let text_color = rgb("#2d2d2d")     // Main text color
+#let timeline_color = secondary
 #let background_color = rgb("#f5f5f5")
 
 
@@ -58,17 +59,12 @@
 // TIMELINE COMPONENTS
 // ==============================================================================
 
-// Timeline dot component
 #let dot(color: timeline_color) = {
   circle(radius: 1.5pt, fill: color)
 }
 
-// Timeline item with dot and vertical line
 #let timeline_item(height: 10em, color: timeline_color, dx: -0.7cm, dy_dot: 0.15em, dx_dot: 0.13em, dy_line: 2em) = {
-  // Dot
   place(left + top, dx: dx + dx_dot, dy: dy_dot, dot(color: color))
-
-  // Vertical line
   place(
     left + top,
     dx: dx + 0.085cm,
@@ -77,15 +73,38 @@
   )
 }
 
+
 // ==============================================================================
-// HEADER SECTION - Inspired by cv02.png design
+// SKILL CHIP & ROW COMPONENTS
+// ==============================================================================
+
+#let chip(label) = box(
+  fill: primary.lighten(80%),
+  stroke: 0.5pt + primary.lighten(10%),
+  radius: 2pt,
+  inset: (x: 5pt, y: 2pt),
+  baseline: 80%,
+  text(size: 6.5pt, fill: accent, font: font_crimson)[#label]
+)
+
+#let skill_row(label, skills) = block(above: 0.5em, below: 0.5em)[
+  #grid(
+    columns: (2.2cm, 1fr),
+    column-gutter: 0.6em,
+    align: (right + horizon, left + top),
+    [#text(size: 7pt, weight: "bold", fill: accent)[#label]],
+    [#skills.map(chip).join(h(0.35em))]
+  )
+]
+
+
+// ==============================================================================
+// HEADER SECTION
 // ==============================================================================
 
 #block(
   width: 100%,
   [
-    // Background initial letter with primary color
-    // Red horizontal line after "Software Engineer"
     #place(
       top + left,
       dx: 4cm,
@@ -98,7 +117,7 @@
       dy: -0.8cm,
       text(
         size: 110pt,
-        fill: primary.lighten(50%), // Soft blue, very light
+        fill: primary.lighten(50%),
         weight: "bold",
         font: font_computer,
       )[H#text(size: 10pt, fill: accent, weight: "bold", font: "New Computer Modern")[#h(2.5em)Software Engineer]
@@ -108,11 +127,9 @@
           weight: "bold",
           font: "New Computer Modern",
         )[#h(4.7em)Jiner#box(baseline: 15%, image("assets/smille-sunglasses.svg", height: 1em))]
-
       ],
     )
 
-    // Vertical divider line
     #place(
       top + left,
       dx: 3.8cm,
@@ -122,7 +139,6 @@
 
     #v(.8cm)
 
-    // Name
     #text(
       size: font_name,
       weight: "bold",
@@ -131,21 +147,63 @@
       tracking: 0.23em,
     )[Nguyen Manh Hung]
     #v(0.1cm)
-    // Job title
     #text(
       size: font_job_title,
       weight: "regular",
       fill: secondary,
-      // tracking: 0.05em,
     )[With 2+ years of experience in enterprise Java and backend engineering, Integrating AI into scalable systems. \
       ICPC medalist, currently developing large-scale Fixed Network Management Systems at work.]
   ],
 )
 
-#v(0.5cm)
+#v(0.4cm)
 
 // ==============================================================================
-// MAIN CONTENT - TWO COLUMN LAYOUT
+// SKILLS BAR — Horizontal section, chip/tag style
+// ==============================================================================
+
+#block(
+  width: 100%,
+  [
+    #text(
+      size: font_section,
+      weight: "bold",
+      tracking: 0.15em,
+      fill: accent,
+    )[#box(baseline: 15%)[#lucide-icon("layers")] SKILLS]
+    #v(-0.7em)
+    #line(length: 100%, stroke: 0.5pt + divider)
+    #v(0.5em)
+
+    #skill_row("BACKEND", (
+      "Java 17", "Spring Boot", "Spring Cloud", "Microservices",
+      "REST API", "Kafka", "Event-Driven", "NETCONF/YANG", "gRPC", "WebSocket",
+    ))
+    #skill_row("DEVOPS", (
+      "Kubernetes", "Helm", "Docker", "Jenkins CI/CD",
+      "Prometheus", "Grafana", "ELK Stack", "OpenSearch",
+      "MinIO", "Redis", "PostgreSQL", "MariaDB",
+    ))
+    #skill_row("AI & AUTO", (
+      "FastAPI", "OpenAI API", "PhoBERT", "ONNX", "TFLite",
+      "Claude Code", "Cursor", "n8n", "Computer Vision",
+      "Edge Inference", "Agentic Workflow",
+    ))
+    #skill_row("LANGUAGES", (
+      "Java", "Python", "C++", "C#", "TypeScript", "Dart",
+      "ASP.NET Core", "Flutter", "Angular", "React",
+    ))
+    #skill_row("ALGORITHMS", (
+      "ICPC Medalist", "Dynamic Programming", "Graph Theory",
+      "Combinatorics", "Competitive Programming",
+    ))
+  ]
+)
+
+#v(0.3cm)
+
+// ==============================================================================
+// MAIN CONTENT — TWO COLUMN LAYOUT
 // ==============================================================================
 
 #grid(
@@ -153,10 +211,10 @@
   column-gutter: 0.5cm,
 
   // ============================================================================
-  // LEFT COLUMN
+  // LEFT COLUMN — Contact · Education · Awards
   // ============================================================================
   [
-    // CONTACT SECTION
+    // CONTACT
     #block(
       above: 0em,
       below: 1.5em,
@@ -175,14 +233,14 @@
           [#lucide-icon("mail", size: 7pt)], [#link("mailto:nmhung.works@gmail.com")[nmhung.works\@gmail.com]],
           [#lucide-icon("map-pin", size: 7pt)], [Ho Chi Minh City, Vietnam],
           [#lucide-icon("phone", size: 7pt)], [#link("tel:+84947339718")[+84 947 339 718]],
-          // [#lucide-icon("linkedin", size: 7pt)], [#link("https://linkedin.com/in/jinergenkai")[linkedin.com/in/jinergenkai]],
-
           [#lucide-icon("github", size: 7pt)], [#link("https://github.com/jinergenkai")[github.com/jinergenkai]],
         )
       ],
     )
+
     #v(1em)
-    // EDUCATION SECTION
+
+    // EDUCATION
     #block(
       above: 0em,
       below: 1.5em,
@@ -196,7 +254,6 @@
         #v(-0.7em)
         #line(length: 3.4cm, stroke: 0.5pt + accent)
 
-        // Bachelor Degree
         #block(
           below: 1.2em,
           [
@@ -212,7 +269,6 @@
           ],
         )
 
-        // Gifted Program
         #block(
           [
             #grid(
@@ -221,13 +277,15 @@
               pad(right: 3.5em)[#align(right)[#text(size: font_small, fill: secondary, style: "italic")[2017 - 2020]]],
             )
             #v(-0.2em)
-            #text(size: font_detail, fill: secondary)[Nguyen Du High School (Informatics)]
+            #text(size: font_detail, fill: secondary)[Nguyen Du HS (Informatics), Dak Lak]
           ],
         )
       ],
     )
+
     #v(1em)
-    // AWARDS SECTION
+
+    // AWARDS
     #block(
       above: 0em,
       below: 1.5em,
@@ -264,68 +322,12 @@
         ]
       ],
     )
-    #v(1em)
-
-    // SKILLS SECTION
-    #block(
-      above: 0em,
-      below: 1.5em,
-      [
-        #text(
-          size: font_section,
-          weight: "bold",
-          tracking: 0.15em,
-          fill: accent,
-        )[#box(baseline: 15%)[#lucide-icon("bow-arrow")] SKILLS]
-        #v(-0.7em)
-        #line(length: 2.2cm, stroke: 0.5pt + accent)
-
-        #set text(size: font_detail, fill: secondary)
-
-        // Backend Skills
-        #text(size: font_subsection, weight: "bold", fill: accent)[BACKEND]
-
-        • Java & Spring Boot\
-        • Maven & Microservices
-
-
-        // Algorithms Skills
-        #text(size: font_subsection, weight: "bold", fill: accent)[ALGORITHMS]
-
-        • Competitive Programming\
-        • Dynamic Programming\
-        • Graph Theory\
-        • Data Structures
-
-
-        // DevOps & Tools
-        #text(size: font_subsection, weight: "bold", fill: accent)[DEVOPS]
-
-        • AWS Cloud Services (EC2, S3)\
-        • Kubernetes & Docker\
-        • PostgreSQL & Redis\
-        • Robot Framework\
-        • Jenkins Pipelines\
-
-        // Frontend Skills
-        #text(size: font_subsection, weight: "bold", fill: accent)[FRONTEND]
-
-        • Flutter Mobile\
-        • Angular & React.js\
-        • TypeScript\
-      ],
-    )
-    #v(3.1em)
-
   ],
 
   // ============================================================================
-  // RIGHT COLUMN
+  // RIGHT COLUMN — Experience
   // ============================================================================
   [
-
-
-    // EXPERIENCE SECTION
     #block(
       above: 3em,
       [
@@ -335,11 +337,9 @@
           tracking: 0.15em,
           fill: accent,
         )[#box(baseline: 15%)[#lucide-icon("briefcase")] EXPERIENCE]
-        // #v(-0.7em)
         #line(length: 100%, stroke: 0.5pt + divider)
-        // #v(0.7em)
 
-        // TMA Solutions Position
+        // TMA Solutions
         #block(
           below: 1.5em,
           [
@@ -350,12 +350,9 @@
               [#text(size: font_subsection, weight: "bold", fill: accent)[TMA Solutions - Backend Engineer]],
               [#text(size: font_detail, fill: secondary, style: "italic")[Apr 2024 - Present]],
             )
-
-            // #v(0.3em)
-            // #text(size: font_body, fill: secondary)[Ho Chi Minh City]
             #v(0.8em)
 
-            // Sub-project 1: Nokia Altiplano
+            // Nokia Altiplano
             #text(size: font_body, weight: "bold", fill: accent)[→ Nokia Altiplano - Access Controller Team]
             #v(0.4em)
 
@@ -372,12 +369,12 @@
 
             #v(0.4em)
             #text(size: font_small, fill: secondary, style: "italic")[
-              Tech: Java, Spring Boot, Angular, Kafka, Helm, Kubernetes, Jenkins, Robot Framework, ELK, Prometheus, Grafana
+              Tech: Java 17, Spring Boot, Angular, Kafka, Helm, Kubernetes, Jenkins, Robot Framework, ELK, Prometheus, Grafana, Keycloak
             ]
 
             #v(0.8em)
 
-            // Sub-project 2: Agentic Vision
+            // Agentic Vision
             #text(size: font_body, weight: "bold", fill: accent)[→ Agentic Vision - AI-Powered Security Platform]
             #v(0.4em)
 
@@ -394,12 +391,12 @@
 
             #v(0.4em)
             #text(size: font_small, fill: secondary, style: "italic")[
-              Tech: Python, FastAPI, React, Docker
+              Tech: Python, FastAPI, React, Docker, MinIO, Redis
             ]
           ],
         )
 
-        // FPT Software Position
+        // FPT Software
         #block(
           below: 1.5em,
           [
@@ -410,9 +407,6 @@
               [#text(size: font_subsection, weight: "bold", fill: accent)[FPT Software - Software Engineer]],
               [#text(size: font_detail, fill: secondary, style: "italic")[Aug 2023 - Apr 2024]],
             )
-
-            // #v(0.3em)
-            // #text(size: font_body, fill: secondary)[Ho Chi Minh City]
             #v(0.8em)
 
             #set text(size: font_body, fill: secondary)
@@ -432,73 +426,79 @@
             ]
           ],
         )
-        #v(1.5em)
-
-        // PROJECTS SUBSECTION
-        #text(
-          size: font_subsection,
-          weight: "bold",
-          tracking: 0.1em,
-          fill: accent,
-        )[#box(baseline: 15%)[#lucide-icon("user")] PROJECTS]
-        #line(length: 100%, stroke: 0.5pt + divider)
-
-        // Project 1: Huynh Hanh Financial Management
-        #block(
-          below: 1.2em,
-          [
-            #timeline_item(height: 7em)
-
-            #grid(
-              columns: (1fr, auto),
-              [#text(size: font_subsection, weight: "bold", fill: accent)[#link(
-                "https://huynhhanh.com",
-              )[Huynh Hanh Financial Management]]],
-              [#text(size: font_detail, fill: secondary, style: "italic")[Aug 2024 - Feb 2025]],
-            )
-            #v(0.2em)
-            #text(size: font_small, fill: primary)[#link("https://huynhhanh.com")[→ huynhhanh.com]]
-
-            #v(0.5em)
-            #set text(size: font_detail, fill: secondary)
-
-            • Full-stack agricultural platform with AI chatbot integration using PhoBERT for Vietnamese NLP\
-            • Built real-time truck weighing system with Web Serial API, receipt printing, and report export\
-            • Developed crop lifecycle management with 3D GPS visualization for planting area tracking
-
-            #v(0.3em)
-            #text(size: font_small, style: "italic")[ASP.NET Core, React.js, Electron.js, Material UI, Docker]
-          ],
-        )
-
-        // Project 2: SmartMicro IoT Platform
-        #block(
-          below: 1.2em,
-          [
-            #timeline_item(height: 6em)
-
-            #grid(
-              columns: (1fr, auto),
-              // TODO: Add github link
-              [#text(size: font_subsection, weight: "bold", fill: accent)[SmartMicro IoT Platform]],
-              [#text(size: font_detail, fill: secondary, style: "italic")[Feb 2024 - Apr 2024]],
-            )
-
-            #v(0.5em)
-            #set text(size: font_detail, fill: secondary)
-
-            • Mobile IoT platform for smart home device management with voice control capabilities\
-            • Connected BLE devices via GATT/UART protocols for real-time device control\
-            • Integrated OpenAI API with Flutter TTS for voice-activated home automation
-
-            #v(0.3em)
-            #text(size: font_small, style: "italic")[Flutter, GetX, ASP.NET Core, SignalR, OpenAI API]
-          ],
-        )
       ],
     )
   ],
 )
+
+
+#pagebreak()
+
+// ==============================================================================
+// PROJECTS — Page 2, Full width, 2-column grid
+// ==============================================================================
+
+#block(
+  width: 100%,
+  [
+    #text(
+      size: font_section,
+      weight: "bold",
+      tracking: 0.15em,
+      fill: accent,
+    )[#box(baseline: 15%)[#lucide-icon("folder-open")] HIGHLIGHT PROJECTS]
+    #line(length: 100%, stroke: 0.5pt + divider)
+    #v(0.3em)
+
+    #grid(
+      columns: (1fr, 1fr),
+      column-gutter: 1.2cm,
+
+      // Project 1: Huynh Hanh Financial Management
+      block(below: 1.2em)[
+        #timeline_item(height: 7em)
+        #grid(
+          columns: (1fr, auto),
+          [#text(size: font_subsection, weight: "bold", fill: accent)[#link("https://huynhhanh.com")[Huynh Hanh Financial Management]]],
+          [#text(size: font_detail, fill: secondary, style: "italic")[Aug 2024 - Feb 2025]],
+        )
+        #v(0.2em)
+        #text(size: font_small, fill: primary)[#link("https://huynhhanh.com")[→ huynhhanh.com]]
+
+        #v(0.5em)
+        #set text(size: font_detail, fill: secondary)
+
+        • Full-stack agricultural platform with AI chatbot integration using PhoBERT for Vietnamese NLP\
+        • Built real-time truck weighing system with Web Serial API, receipt printing, and report export\
+        • Developed crop lifecycle management with 3D GPS visualization for planting area tracking
+
+        #v(0.3em)
+        #text(size: font_small, style: "italic")[ASP.NET Core, React.js, Electron.js, Material UI, Docker]
+      ],
+
+      // Project 2: SmartMicro IoT Platform
+      block(below: 1.2em)[
+        #timeline_item(height: 6em)
+        #grid(
+          columns: (1fr, auto),
+          [#text(size: font_subsection, weight: "bold", fill: accent)[SmartMicro IoT Platform]],
+          [#text(size: font_detail, fill: secondary, style: "italic")[Feb 2024 - Apr 2024]],
+        )
+
+        #v(0.5em)
+        #set text(size: font_detail, fill: secondary)
+
+        • Mobile IoT platform for smart home device management with voice control capabilities\
+        • Connected BLE devices via GATT/UART protocols for real-time device control\
+        • Integrated OpenAI API with Flutter TTS for voice-activated home automation
+
+        #v(0.3em)
+        #text(size: font_small, style: "italic")[Flutter, GetX, ASP.NET Core, SignalR, OpenAI API]
+      ],
+    )
+  ],
+)
+
 
 // ==============================================================================
 // FOOTER

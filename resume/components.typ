@@ -38,7 +38,7 @@
 )
 
 // Skill row: bold label | chip row
-#let skill_row(label, skills) = block(above: 0.5em, below: 0.5em)[
+#let skill_row(label, skills) = block(above: 0.25em, below: 0.25em)[
   #grid(
     columns: (2.2cm, 1fr),
     column-gutter: 0.6em,

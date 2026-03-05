@@ -48,14 +48,14 @@
       fill: accent,
       font: font_display,
       tracking: 0.23em,
-    )[Nguyen Manh Hung]
+    )[Nguyễn Mạnh Hùng]
     #v(0.1cm)
     #text(
       size: font_job_title,
       weight: "regular",
       fill: secondary,
-    )[With 2+ years of experience in enterprise Java and backend engineering, Integrating AI into scalable systems. \
-      ICPC medalist, currently developing large-scale Fixed Network Management Systems at work.]
+    )[With 2+ years of Backend Engineer specializing in distributed systems, network management platforms, and AI-powered infrastructure \
+Competitive programmer who enjoys solving hard problems and rapidly learning new technologies across domains.]
   ],
 )
 

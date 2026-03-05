@@ -10,21 +10,29 @@
   above: 0em,
   below: 1.5em,
   [
-    #v(0.5em)
-    #line(length: 2cm, stroke: 0.5pt + accent)
+    #text(
+      size: font_section,
+      weight: "bold",
+      tracking: 0.15em,
+      fill: accent,
+    )[#box(baseline: 15%)[#lucide-icon("user-round")] CONTACT]
+    #v(-0.7em)
+    #line(length: 3cm, stroke: 0.5pt + accent)
     #v(0.7em)
 
     #set text(size: font_detail, fill: secondary)
 
     #grid(
       columns: (auto, 1fr),
-      row-gutter: 0.8em,
-      column-gutter: 0.5em,
+      row-gutter: 1.2em,
+      column-gutter: 1em,
 
-      [#lucide-icon("mail", size: 7pt)],    [#link("mailto:nmhung.works@gmail.com")[nmhung.works\@gmail.com]],
-      [#lucide-icon("map-pin", size: 7pt)], [Ho Chi Minh City, Vietnam],
-      [#lucide-icon("phone", size: 7pt)],   [#link("tel:+84947339718")[+84 947 339 718]],
-      [#lucide-icon("github", size: 7pt)],  [#link("https://github.com/jinergenkai")[github.com/jinergenkai]],
+      [#lucide-icon("mail", size: 5pt)],    [#link("mailto:nmhung.works@gmail.com")[nmhung.works\@gmail.com]],
+      [#lucide-icon("map-pin", size: 5pt)], [Ho Chi Minh City, Vietnam],
+      [#lucide-icon("phone", size: 5pt)],   [#link("tel:+84947339718")[+84 947 339 718]],
+      [#lucide-icon("github", size: 5pt)],  [#link("https://github.com/jinergenkai")[github.com/jinergenkai]],
+      [#lucide-icon("linkedin", size: 5pt)],  [#link("https://www.linkedin.com/in/jinergenkai")[linkedin.com/in/jinergenkai]],
+      [#lucide-icon("book", size: 5pt)],  [#link("https://jinergenkai.github.io")[Jiner Blog]],
     )
   ],
 )
@@ -46,7 +54,7 @@
     #line(length: 3.4cm, stroke: 0.5pt + accent)
 
     #block(
-      below: 1.2em,
+      below: 2.2em,
       [
         #grid(
           columns: (1fr, auto),
@@ -92,23 +100,23 @@
 
     #set text(size: font_detail, fill: secondary)
 
-    #block(below: 1.1em)[
-      #link("https://huynhhanh.com")[• *ICPC 2023* - Third Prize\
+    #block(below: 2.1em)[
+      #link("https://github.com/jinergenkai/jinergenkai/blob/main/awards/2023-ICPC%20Vietnam%20Southern%20Provincial%20PC-MEDAL.pdf")[• *ICPC 2023* - Third Prize\
       #h(0.5em) Vietnam Southern Region #box(baseline: 15%)[#text(fill: primary)[#lucide-icon("external-link", size: 7pt)]]]
     ]
 
-    #block(below: 1.1em)[
-      #link("https://huynhhanh.com")[• *Meta Hacker Cup 2025*\
+    #block(below: 2.1em)[
+      #link("https://www.facebook.com/codingcompetitions/hacker-cup/2025/certificate/1212807709928476")[• *Meta Hacker Cup 2025*\
       #h(0.5em) Round 2 - Top 12% Global #box(baseline: 15%)[#text(fill: primary)[#lucide-icon("external-link", size: 7pt)]]]
     ]
 
-    #block(below: 1.1em)[
-      #link("https://huynhhanh.com")[• *ICPC 2021* - Honorable Mention\
+    #block(below: 2.1em)[
+      #link("https://github.com/jinergenkai/jinergenkai/blob/main/awards/2021-ICPC%20Vietnam%20National%20PC-HONORABLE.pdf")[• *ICPC 2021* - Honorable Mention\
       #h(0.5em) Vietnam National #box(baseline: 15%)[#text(fill: primary)[#lucide-icon("external-link", size: 7pt)]]]
     ]
 
     #block(below: 1.1em)[
-      #link("https://huynhhanh.com")[• *National Excellent Student 2020*\
+      #link("https://github.com/jinergenkai/jinergenkai/blob/main/awards/Honorable%20mention%20for%20The%20Informatics%20in%20the%202020%20National%20High%20School.jpg")[• *National Excellent Student 2020*\
       #h(0.5em) Informatics - Honorable Mention #box(baseline: 15%)[#text(fill: primary)[#lucide-icon("external-link", size: 7pt)]]]
     ]
   ],

@@ -17,34 +17,30 @@
     )[#box(baseline: 15%)[#lucide-icon("layers")] SKILLS]
     #v(-0.7em)
     #line(length: 100%, stroke: 0.5pt + divider)
-    #v(0.5em)
+    #v(0.3em)
 
-    #skill_row("BACKEND", (
-      // Core enterprise → rare protocols → architecture patterns
-      "Java 17", "Spring Boot", "Spring Cloud",
-      "NETCONF/YANG", "Kafka", "gRPC",
-      "Microservices", "Event-Driven", "REST API", "WebSocket",
+    #skill_row("Core Expertise", (
+      "Java", "Spring Boot", "Kafka", "Event-Driven", "Microservices", "Distributed Systems",
     ))
-    #skill_row("DEVOPS", (
-      // Orchestration → observability (senior signal) → storage
-      "Kubernetes","Docker", "Jenkins CI/CD",
-      "Prometheus", "Grafana", "ELK Stack",
-      "Redis", "PostgreSQL", "OpenSearch", "MinIO", "MariaDB",
+    #skill_row("Infrastructure", (
+      "Kubernetes", "Docker", "Jenkins", "Robot Framework",
+      "Prometheus", "Grafana", "ELK Stack", "Keycloak", "SonarQube",
+      "Redis", "PostgreSQL",
     ))
-    #skill_row("AI & AUTO", (
-      // Production AI first → model tooling → agentic workflow
-      "Computer Vision", "Edge Inference", "ONNX", "TFLite",
-      "FastAPI", "OpenAI API", "PhoBERT",
-      "Agentic Workflow", "Claude Code", "Cursor", "n8n",
+    #skill_row("AI/Auto Systems", (
+      "Computer Vision", "on-device AI (Pytorch, ONNX, TFLite)",
+      "FastAPI", "OpenAI API", "n8n", "ComfyUI",
     ))
-    #skill_row("LANGUAGES", (
-      // Primary → secondary → frameworks by domain
+    #skill_row("Languages", (
       "Java", "Python", "TypeScript", "C++", "C#", "Dart",
-      "Flutter", "Angular", "React", "ASP.NET Core",
+      "Flutter", "React.js", "Tailwind CSS",
     ))
-    #skill_row("ALGORITHMS", (
-      // Achievements first → technique depth
-      "Dynamic Programming", "Graph Theory", "Combinatorics",
+    #skill_row("Tools", (
+      "Git","Jira", "Confluence", "Figma",
+      "Claude Code", "Cursor", "Vim"
+    ))
+    #skill_row("Algorithms", (
+      "Dynamic Programming", "Data Structures", "Graph Theory", "Combinatorics",
     ))
   ]
 )

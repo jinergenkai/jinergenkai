@@ -15,7 +15,10 @@
       tracking: 0.15em,
       fill: accent,
     )[#box(baseline: 15%)[#lucide-icon("briefcase")] EXPERIENCE]
+    // #line(length: 100%, stroke: 0.5pt + divider)
+    #v(-0.7em)
     #line(length: 100%, stroke: 0.5pt + divider)
+    #v(0.7em)
 
     // ── TMA Solutions ────────────────────────────────────────────────────────
     #block(
@@ -41,9 +44,9 @@
         #v(0.4em)
         #set text(size: font_detail)
 
-        • Designed bulk device upgrade orchestration with parallel execution, retry mechanisms, and failure recovery for NT/LT board reachability across distributed network topology NETCONF/YANG\
-        • Owned Build Police responsibilities for 20+ member cross-regional team (Vietnam/India), managing Jenkins pipeline stability, analyzing test failures via Kibana, monitoring system health through Prometheus/Grafana, and coordinating infrastructure issues with DevOps\
-        • Contributed to event streaming migration from JMS to Kafka for inter-domain communication between AC and IBN services
+        • Designed distributed firmware upgrade orchestration for telecom devices using NETCONF/YANG, supporting parallel execution, retry strategies, and fault recovery across large network topologies\
+        • Build Police responsibilities for 20+ member cross-regional team (Vietnam/India), managing Jenkins pipeline stability, analyzing test failures via Kibana, monitoring system health through Prometheus/Grafana, and coordinating infrastructure issues with DevOps\
+        • Migrated event streaming pipeline from JMS to Kafka, enabling scalable inter-domain communication across AC and IBN services.
 
         #v(0.4em)
         #text(size: font_small, fill: secondary, style: "italic")[
@@ -63,7 +66,7 @@
         #v(0.4em)
         #set text(size: font_detail)
 
-        • Developed FastAPI backend orchestrating AI inference service for real-time violation detection across 50+ cameras, with automated alerting via Zalo OA and email\
+        • Developed FastAPI backend orchestrating AI inference across 50+ cameras with automated alert pipelines, reducing manual monitoring workload by 67%.\
         • Implemented core platform services including notification system, license management, image storage with MinIO, and caching layer for AI model responses\
         • Collaborated with AI team on service contract design and integration patterns for custom security use-cases and workflow
 
@@ -95,7 +98,7 @@
         #set text(size: font_detail)
 
         • Implemented measurement and annotation features for blood flow analysis, vessel sizing, and wall thickness detection in medical imaging applications\
-        • Optimized application performance by offloading heavy I/O operations from UI thread, reducing startup time by 40% and improving responsiveness\
+        • Optimized ultrasound imaging application by offloading heavy I/O operations from UI thread, reducing startup time by 20%.\
         • Restructured API response formats to meet specific client requirements, ensuring efficient data delivery and seamless frontend integration
 
         #v(0.5em)

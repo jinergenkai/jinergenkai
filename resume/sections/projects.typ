@@ -1,5 +1,5 @@
 // ==============================================================================
-// HIGHLIGHT PROJECTS — Page 2
+// PROJECTS – Page 2
 // ==============================================================================
 
 #import "../theme.typ": *
@@ -12,7 +12,7 @@
   weight: "bold",
   tracking: 0.15em,
   fill: accent,
-)[#box(baseline: 15%)[#lucide-icon("folder-open")] HIGHLIGHT PROJECTS]
+)[#box(baseline: 15%)[#lucide-icon("folder-open")] FREELANCE / PROJECTS]
 #v(-0.7em)
 #line(length: 100%, stroke: 0.5pt + divider)
 #v(0.5em)
@@ -22,7 +22,30 @@
   column-gutter: 1.2cm,
   row-gutter: 3em,
 
-  // ── Huynh Hanh — Production ERP ──────────────────────────────────────────
+  // ── ThuleHT – E-commerce Platform ────────────────────────────────────────
+  block[
+    #grid(
+      columns: (1fr, auto),
+      [#text(size: font_subsection, weight: "bold", fill: accent)[#link("https://thuleht.com")[ThuleHT – E-commerce Platform]]],
+      [#text(size: font_detail, fill: secondary, style: "italic")[2024 - Present]],
+    )
+    #v(-0.3em)
+    #text(size: font_small, fill: primary)[#link("https://thuleht.com")[→ thuleht.com]]
+    #v(0.4em)
+    #set text(size: font_detail, fill: secondary)
+
+    Go microservices backend for cosmetics e-commerce platform with integrated search, messaging, and chatbot infrastructure.
+
+    #v(0.3em)
+    • Built notification service with multi-channel delivery (Zalo OA API, email) – order updates, promotional messaging, and Zalo Official Account registration/verification\
+    • Developed search service using Elasticsearch with Vietnamese language support for product discovery\
+    • Implemented chatbot with MCP-based tool integration for automated customer inquiries and order tracking
+
+    #v(0.3em)
+    #text(size: font_small, style: "italic")[Golang, Elasticsearch, Zalo OA API, Docker, PostgreSQL]
+  ],
+
+  // ── Huynh Hanh – Management System ──────────────────────────────────────
   block[
     #grid(
       columns: (auto, 1fr),
@@ -33,72 +56,56 @@
         #grid(
           columns: (1fr, auto),
           align: (left + top, right + top),
-          text(size: font_subsection, weight: "bold", fill: accent)[#link("https://huynhhanh.com")[Huynh Hanh — Production ERP]],
-          text(size: font_detail, fill: secondary, style: "italic")[Aug 2024 - Feb 2025],
+          text(size: font_subsection, weight: "bold", fill: accent)[#link("https://huynhhanh.com")[Huynh Hanh – Management System]],
+          text(size: font_detail, fill: secondary, style: "italic")[2024 - Present],
         )
         #v(-0.4em)
-        #text(size: font_small, fill: primary)[#link("https://huynhhanh.com")[→ huynhhanh.com]]
+        #text(size: font_small, fill: primary)[#link("https://huynhhanh.com")[→ huynhhanh.com] · #link("https://github.com/huynhhanh-ms")[github.com/huynhhanh-ms]]
       ],
     )
     #v(0.4em)
     #set text(size: font_detail, fill: secondary)
 
-    Designed ERP system for multi-site agricultural operations integrating hardware weighing stations and real-time receipt generation.
+    Multi-service platform for agricultural operations with Java and Go microservices backends.
 
     #v(0.3em)
-    • Architected full-stack ERP handling weighing station hardware via Web Serial API with real-time data sync, receipt printing, and automated report generation\
-    • Integrated Vietnamese NLP chatbot (PhoBERT) for natural language business queries across inventory and financial data\
-    • Built crop lifecycle management with 3D GPS visualization for multi-site planting area tracking
+    • Built Java storage service with RAG pipeline for intelligent document search across operational records\
+    • Developed Go land management service with geospatial data handling for multi-site property tracking\
+    • Integrated hardware data sync via Web Serial API for weighing stations with automated receipt generation
 
     #v(0.3em)
-    #text(size: font_small, style: "italic")[ASP.NET Core, React.js, Electron.js, Docker, PhoBERT]
+    #text(size: font_small, style: "italic")[Java, Spring Boot, Golang, PostgreSQL, Docker, RAG]
   ],
 
-  // ── AI Content Automation Pipeline ───────────────────────────────────────
+  // ── J Post Image ─────────────────────────────────────────────────────────
   block[
     #grid(
       columns: (1fr, auto),
-      [#text(size: font_subsection, weight: "bold", fill: accent)[AI Content Automation Pipeline]],
+      [#text(size: font_subsection, weight: "bold", fill: accent)[J Post Image – AI Content Generation & Distribution]],
       [#text(size: font_detail, fill: secondary, style: "italic")[2025 - Present]],
     )
+    #v(-0.3em)
+    #text(size: font_small, fill: primary)[#link("https://t.me/jiner_screen_bot")[→ t.me/jiner_screen_bot]]
     #v(0.4em)
     #set text(size: font_detail, fill: secondary)
 
-    End-to-end content generation and distribution pipeline with model-agnostic architecture.
+    End-to-end AI content pipeline: local GPU image/video generation → automated posting → audience engagement, orchestrated via Telegram bot. Try it: 5 free credits per user.
 
     #v(0.3em)
-    • Built automated AI content pipeline integrating image/video generation models with workflow automation (ComfyUI + n8n) and multi-platform distribution.\
-    • Integrated Zalo OA chatbot for audience engagement and automated response workflows\
-    • Designed model-agnostic workflow enabling rapid swap between FLUX, SDXL, and video generation models
+    • Architected on-premise GPU inference with WireGuard VPN tunneling through VPS hub – serving ZImage/Qwen models from local RTX via Telegram bot interface\
+    • Built automated distribution: ComfyUI generation → Postiz scheduling → multi-platform posting, with Supabase storage and FastAPI orchestration\
+    • Designed model-agnostic workflow enabling rapid swap between FLUX, SDXL, and video generation models without pipeline reconfiguration
 
     #v(0.3em)
-    #text(size: font_small, style: "italic")[ComfyUI, Python, n8n, Zalo OA API, Docker]
-  ],
-
-  // ── SmartMicro IoT Platform ───────────────────────────────────────────────
-  block[
-    #grid(
-      columns: (1fr, auto),
-      [#text(size: font_subsection, weight: "bold", fill: accent)[SmartMicro IoT Platform]],
-      [#text(size: font_detail, fill: secondary, style: "italic")[Feb 2024 - Apr 2024]],
-    )
-    #v(0.4em)
-    #set text(size: font_detail, fill: secondary)
-
-    • Mobile IoT platform for smart home device management with voice control capabilities\
-    • Connected BLE devices via GATT/UART protocols for real-time device control\
-    • Integrated OpenAI API with Flutter TTS for voice-activated home automation
-
-    #v(0.3em)
-    #text(size: font_small, style: "italic")[Flutter, GetX, ASP.NET Core, SignalR, OpenAI API]
+    #text(size: font_small, style: "italic")[Python, FastAPI, ComfyUI, WireGuard, Supabase, Telegram Bot API, Docker, n8n]
   ],
 )
 
 // FOOTER
-#let today = datetime.today()
-#v(1fr)
-#align(center)[
-  #text(size: font_small, fill: secondary)[
-    Portfolio updated on #today.display("[month repr:long] [day], [year]")
-  ]
-]
+// #let today = datetime.today()
+// #v(1fr)
+// #align(center)[
+//   #text(size: font_small, fill: secondary)[
+//     Portfolio updated on #today.display("[month repr:long] [day], [year]")
+//   ]
+// ]

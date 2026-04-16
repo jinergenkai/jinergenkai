@@ -1,5 +1,5 @@
 // ==============================================================================
-// THEME — Font sizes, font families, color scheme
+// THEME – Font sizes, font families, color scheme
 // ==============================================================================
 
 // Font sizes

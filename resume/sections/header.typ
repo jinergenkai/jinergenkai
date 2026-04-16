@@ -23,7 +23,7 @@
         fill: primary.lighten(50%),
         weight: "bold",
         font: font_computer,
-      )[H#text(size: 10pt, fill: accent, weight: "bold", font: "New Computer Modern")[#h(2.5em)Software Engineer]
+      )[H#text(size: 10pt, fill: accent, weight: "bold", font: "New Computer Modern")[#h(2.5em)Backend Engineer]
         #text(
           size: 30pt,
           fill: background_color,
@@ -54,8 +54,7 @@
       size: font_job_title,
       weight: "regular",
       fill: secondary,
-    )[With 2+ years of Backend Engineer specializing in distributed systems, network management platforms, and AI-powered infrastructure \
-Competitive programmer who enjoys solving hard problems and rapidly learning new technologies across domains.]
+    )[Backend Engineer with 3 years building distributed systems serving 5,000+ devices across 5 countries. Specializing in Java/Spring Boot, Kafka, and Kubernetes, with hands-on AI integration experience shipping computer vision pipelines to enterprise clients.]
   ],
 )
 

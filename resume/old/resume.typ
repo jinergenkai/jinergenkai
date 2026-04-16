@@ -72,7 +72,7 @@
   ]
   #v(-0.5em)
   #text(size: 12pt, fill: primary, weight: "semibold")[
-    Software Engineer
+    Backend Engineer
   ]
 ]
 
@@ -103,7 +103,7 @@
   [
     // Professional Summary
     #section-title("Professional Summary")
-    Software Engineer with 1.5+ years of experience specializing in enterprise Java development and test automation. Currently at Nokia developing Fixed Network Management Systems using Spring Boot, Angular, and Robot Framework. Strong background in competitive programming (ICPC medalist) with expertise in building scalable backend systems, RESTful APIs, and CI/CD pipelines. Proven track record in optimizing system performance and delivering high-quality software solutions.
+    With 3 years of experience building distributed systems processing 10K+ device upgrades across 5 countries. Specializing in Java/Spring Boot microservices, Kafka event streaming, and Kubernetes orchestration.
     
     #v(0.8em)
     

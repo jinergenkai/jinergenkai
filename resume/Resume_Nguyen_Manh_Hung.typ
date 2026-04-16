@@ -1,5 +1,5 @@
 // ==============================================================================
-// RESUME — Nguyen Manh Hung
+// RESUME – Nguyen Manh Hung
 // Entry point: page config + #set rules + layout
 // Edit content in sections/, theme in theme.typ, components in components.typ
 // ==============================================================================
@@ -9,7 +9,7 @@
 #import "components.typ": *
 
 // ==============================================================================
-// PAGE & TEXT CONFIGURATION  (must stay here — #set rules are scope-global)
+// PAGE & TEXT CONFIGURATION  (must stay here – #set rules are scope-global)
 // ==============================================================================
 
 #set page(

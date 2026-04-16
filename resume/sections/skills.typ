@@ -1,5 +1,5 @@
 // ==============================================================================
-// SKILLS BAR — Horizontal section, chip/tag style
+// SKILLS BAR – Horizontal section, chip/tag style
 // ==============================================================================
 
 #import "../theme.typ": *
@@ -20,27 +20,23 @@
     #v(0.3em)
 
     #skill_row("Core Expertise", (
-      "Java", "Spring Boot", "Kafka", "Event-Driven", "Microservices", "Distributed Systems",
+      "Java 17", "Spring Boot", "Kafka", "Event-Driven Architecture", "Microservices", "Distributed Systems",
     ))
     #skill_row("Infrastructure", (
-      "Kubernetes", "Docker", "Jenkins", "Robot Framework",
-      "Prometheus", "Grafana", "ELK Stack", "Keycloak", "SonarQube",
-      "Redis", "PostgreSQL",
+      "Kubernetes", "Helm", "Docker", "Jenkins", "Prometheus", "Grafana",
+      "ELK/OpenSearch", "Keycloak", "NGINX Ingress", "SonarQube",
     ))
-    #skill_row("AI/Auto Systems", (
-      "Computer Vision", "on-device AI (Pytorch, ONNX, TFLite)",
-      "FastAPI", "OpenAI API", "n8n", "ComfyUI",
+    #skill_row("Data & Messaging", (
+      "PostgreSQL", "MariaDB", "Redis", "Elasticsearch", "Kafka (migration + production ops)",
+    ))
+    #skill_row("AI Integration", (
+      "FastAPI", "RAG pipelines", "OpenAI API", "On-premise GPU inference", "Computer Vision (Pytorch, ONNX)",
     ))
     #skill_row("Languages", (
-      "Java", "Python", "TypeScript", "C++", "C#", "Dart",
-      "Flutter", "React.js", "Tailwind CSS",
+      "Java", "Golang", "Python", "TypeScript",
     ))
     #skill_row("Tools", (
-      "Git","Jira", "Confluence", "Figma",
-      "Claude Code", "Cursor", "Vim"
-    ))
-    #skill_row("Algorithms", (
-      "Dynamic Programming", "Data Structures", "Graph Theory", "Combinatorics",
+      "Git", "Jira", "Confluence", "Robot Framework", "WireGuard", "n8n",
     ))
   ]
 )

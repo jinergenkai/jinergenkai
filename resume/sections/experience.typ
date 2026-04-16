@@ -52,7 +52,8 @@
 
         #v(0.4em)
         #text(size: font_small, fill: secondary, style: "italic")[
-          Tech: Java 17, Spring Boot, Kafka, Helm, Kubernetes, NGINX Ingress, Jenkins, MariaDB, Redis, Robot Framework, ELK/OpenSearch, Prometheus, Grafana, Keycloak, SonarQube, NETCONF/YANG
+          Tech: Java 17, Spring Boot, Kafka, Helm, Kubernetes, NGINX Ingress, Jenkins, MariaDB, Redis \
+          ELK/OpenSearch, Prometheus, Grafana, Keycloak, NETCONF/YANG
         ]
 
         #v(0.8em)

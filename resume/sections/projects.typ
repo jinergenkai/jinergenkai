@@ -12,7 +12,7 @@
   weight: "bold",
   tracking: 0.15em,
   fill: accent,
-)[#box(baseline: 15%)[#lucide-icon("folder-open")] FREELANCE / PROJECTS]
+)[#box(baseline: 15%)[#lucide-icon("folder-open")] PROJECTS]
 #v(-0.7em)
 #line(length: 100%, stroke: 0.5pt + divider)
 #v(0.5em)
@@ -25,12 +25,21 @@
   // ── ThuleHT – E-commerce Platform ────────────────────────────────────────
   block[
     #grid(
-      columns: (1fr, auto),
-      [#text(size: font_subsection, weight: "bold", fill: accent)[#link("https://thuleht.com")[ThuleHT – E-commerce Platform]]],
-      [#text(size: font_detail, fill: secondary, style: "italic")[2024 - Present]],
+      columns: (auto, 1fr),
+      column-gutter: 0.8em,
+      align: (left + top, left + top),
+      image("../images/thule.jpg", height: 18pt),
+      [
+        #grid(
+          columns: (1fr, auto),
+          align: (left + top, right + top),
+          text(size: font_subsection, weight: "bold", fill: accent)[#link("https://thuleht.com")[ThuleHT – E-commerce Platform]],
+          text(size: font_detail, fill: secondary, style: "italic")[2025 - Present],
+        )
+        #v(-0.4em)
+        #text(size: font_small)[#link("https://thuleht.com")[→ thuleht.com]]
+      ],
     )
-    #v(-0.3em)
-    #text(size: font_small, fill: primary)[#link("https://thuleht.com")[→ thuleht.com]]
     #v(0.4em)
     #set text(size: font_detail, fill: secondary)
 
@@ -60,7 +69,7 @@
           text(size: font_detail, fill: secondary, style: "italic")[2024 - Present],
         )
         #v(-0.4em)
-        #text(size: font_small, fill: primary)[#link("https://huynhhanh.com")[→ huynhhanh.com] · #link("https://github.com/huynhhanh-ms")[github.com/huynhhanh-ms]]
+        #text(size: font_small)[#link("https://huynhhanh.com")[→ huynhhanh.com] · #link("https://github.com/huynhhanh-ms")[github.com/huynhhanh-ms]]
       ],
     )
     #v(0.4em)
@@ -81,15 +90,15 @@
   block[
     #grid(
       columns: (1fr, auto),
-      [#text(size: font_subsection, weight: "bold", fill: accent)[J Post Image – AI Content Generation & Distribution]],
+      [#text(size: font_subsection, weight: "bold", fill: accent)[#link("https://t.me/jiner_screen_bot")[J Post Image — AI Content Pipeline]]],
       [#text(size: font_detail, fill: secondary, style: "italic")[2025 - Present]],
     )
     #v(-0.3em)
-    #text(size: font_small, fill: primary)[#link("https://t.me/jiner_screen_bot")[→ t.me/jiner_screen_bot]]
+    #text(size: font_small)[#link("https://t.me/jiner_screen_bot")[→ t.me/jiner_screen_bot] · Try it: 5 free credits per telegram user]
     #v(0.4em)
     #set text(size: font_detail, fill: secondary)
 
-    End-to-end AI content pipeline: local GPU image/video generation → automated posting → audience engagement, orchestrated via Telegram bot. Try it: 5 free credits per user.
+    End-to-end AI content pipeline: local GPU image/video generation → automated posting → audience engagement, orchestrated via Telegram bot.
 
     #v(0.3em)
     • Architected on-premise GPU inference with WireGuard VPN tunneling through VPS hub – serving ZImage/Qwen models from local RTX via Telegram bot interface\

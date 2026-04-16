@@ -23,5 +23,6 @@
 #let accent           = rgb("#1a1a1a")   // Dark text
 #let divider          = rgb("#d0d0d0")   // Light divider
 #let text_color       = rgb("#2d2d2d")   // Main text
+#let link_color       = rgb("#2b6196")   // Visible medium-dark blue for links
 #let timeline_color   = secondary
 #let background_color = rgb("#f5f5f5")

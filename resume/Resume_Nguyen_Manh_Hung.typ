@@ -25,6 +25,8 @@
 )
 
 #set par(justify: true, leading: 0.7em)
+#set text(hyphenate: false)
+#show link: it => text(fill: link_color)[#it]
 
 // ==============================================================================
 // PAGE 1 LAYOUT

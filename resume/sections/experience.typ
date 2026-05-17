@@ -24,7 +24,7 @@
     #block(
       below: 1.5em,
       [
-        #timeline_item(height: 40em)
+        #timeline_item(height: 38.5em)
 
         #grid(
           columns: (1fr, auto),
@@ -39,43 +39,40 @@
 
         #set text(size: font_body, fill: secondary)
 
-        Designed campaign management system within Nokia Altiplano platform, orchestrating firmware upgrades for 5,000+ telecom devices across distributed optical network infrastructure spanning 5 countries.
+        Implemented and maintained platform services within Nokia Altiplano, focusing on large-scale device orchestration and telemetry stream processing.
 
         #v(0.4em)
         #set text(size: font_detail)
 
-        • Designed distributed firmware upgrade orchestration using NETCONF/YANG with dual-bank architecture, parallel execution across 3 regions, circuit breaker patterns, and automated rollback\
-        • Diagnosed critical Kafka consumer lag incident caused by fixed partition key – implemented distributed key strategy restoring real-time processing for 20+ microservices\
-        • Owned Build Police role for 20+ member cross-regional team (Vietnam/India/China/Greece/Finland) – Jenkins CI/CD health, flaky test reduction via Robot Framework, code quality enforcement via SonarQube\
-        • Migrated event streaming from JMS to Kafka, enabling scalable inter-domain communication across AC and IBN services\
-        • Resolved 15+ CVE security tickets using Syft SBOM analysis across containerized microservices
+        • Worked within KPI engine domain - windowed metric computation across telemetry streams from thousands of devices, partitioning Kafka topics by device hostname for ordering guarantees and feeding periodic aggregated KPIs into OpenTSDB and the alarm pipeline\
+        • Built campaign orchestration service for firmware upgrades across 5,000+ telecom devices spanning 5 countries — publishing campaign lifecycle events to Kafka for cross-service coordination, implementing dual-bank rollback, staggered execution windows, and per-device idempotent state transitions over NETCONF/YANG to keep network availability during regional rollouts\
+        • Rotated as Build Police for 14+ engineer cross-regional team (Vietnam, India, China, Greece, Finland) - triaging Jenkins pipeline failures, isolating flaky Robot Framework tests, and routing infrastructure issues to DevOps to reduce developer-blocking failures and improve mean-time-to-merge.
 
         #v(0.4em)
         #text(size: font_small, fill: secondary, style: "italic")[
-          Tech: Java 17, Spring Boot, Kafka, Helm, Kubernetes, NGINX Ingress, Jenkins, MariaDB, Redis \
-          ELK/OpenSearch, Prometheus, Grafana, Keycloak, NETCONF/YANG
+          Tech: Java, Spring Boot, Kafka, Kubernetes, Helm, Jenkins, MariaDB, Redis, OpenTSDB, ELK/OpenSearch, Prometheus, Grafana
         ]
 
         #v(0.8em)
 
         // Agentic Vision
-        #text(size: font_body, weight: "bold", fill: accent)[→ Agentic Vision – AI-Powered Security Platform (dedicated assignment)]
+        #text(size: font_body, weight: "bold", fill: accent)[→ Agentic Vision – AI-Powered Security Platform]
         #v(0.4em)
 
         #set text(size: font_body, fill: secondary)
 
-        Architected backend for AI-powered security monitoring platform with real-time video streaming and escalating alert workflows, processing 100+ camera feeds. Deployed on-premise for enterprise clients including Novaland.
+        Integrated AI-powered video monitoring capabilities into existing Java enterprise security platform. Building Python inference layer and connecting it to the Spring Boot orchestration system via Kafka. Deployed on-premise for enterprise clients including Novaland.
 
         #v(0.4em)
         #set text(size: font_detail)
 
-        • Built FastAPI streaming backend with WebSocket for real-time 100+ IP camera monitoring, automated alert pipelines reducing manual workload by 67%\
-        • Designed escalating alert workflow engine: user-configurable trigger chains (1min → 5min intervals, progressive severity) routing to mail/SMS recipients – enabling custom security response automation\
-        • Implemented token-aware prompt optimization for OpenAI API, balancing inference accuracy vs cost with response caching to cut redundant calls
+        • Built Python/FastAPI streaming service with WebSocket for real-time 100+ IP camera monitoring, integrated into existing Spring Boot platform via Kafka for decoupled alert processing\
+        • Extended alert workflow engine in Spring Boot with configurable trigger chains (1min → 5min intervals, progressive severity) routing to mail/SMS recipients – enabling custom security response automation\
+        • Implemented token-aware prompt optimization for OpenAI API, balancing inference accuracy vs cost with Redis caching to cut redundant calls
 
         #v(0.4em)
         #text(size: font_small, fill: secondary, style: "italic")[
-          Tech: Python, FastAPI (StreamResponse), WebSocket, Redis, OpenAI API, Docker
+          Tech: Java, Spring Boot, Kafka, Python, FastAPI, WebSocket, Redis, OpenAI API, Docker
         ]
       ],
     )
@@ -84,7 +81,7 @@
     #block(
       below: 1.5em,
       [
-        #timeline_item(height: 10em)
+        #timeline_item(height: 8.5em)
 
         #grid(
           columns: (1fr, auto),
@@ -95,12 +92,12 @@
 
         #set text(size: font_body, fill: secondary)
 
-        Developed medical imaging software for ultrasound analysis – performance optimization and API design for international healthcare clients.
+        Developed medical imaging software for ultrasound analysis - performance optimization and API design for international healthcare clients.
 
         #v(0.6em)
         #set text(size: font_detail)
 
-        • Optimized imaging application by offloading heavy I/O to background threads, reducing startup time by 20%\
+        • Optimized imaging application by offloading heavy I/O to background, reducing startup time by 20%\
         • Restructured backend API response formats for efficient high-throughput medical data delivery
 
         #v(0.5em)

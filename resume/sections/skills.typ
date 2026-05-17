@@ -1,5 +1,5 @@
 // ==============================================================================
-// SKILLS BAR – Horizontal section, chip/tag style
+// SKILLS BAR — Horizontal section, chip/tag style
 // ==============================================================================
 
 #import "../theme.typ": *
@@ -20,23 +20,19 @@
     #v(0.3em)
 
     #skill_row("Core Expertise", (
-      "Java 17", "Spring Boot", "Kafka", "Event-Driven Architecture", "Microservices", "Distributed Systems",
+      "Java", "Spring Boot", "Kafka", "Microservices", "Distributed Systems",
     ))
     #skill_row("Infrastructure", (
       "Kubernetes", "Helm", "Docker", "Jenkins", "Prometheus", "Grafana",
-      "ELK/OpenSearch", "Keycloak", "NGINX Ingress", "SonarQube",
     ))
-    #skill_row("Data & Messaging", (
-      "PostgreSQL", "MariaDB", "Redis", "Elasticsearch", "Kafka (migration + production ops)",
+    #skill_row("Data", (
+      "PostgreSQL", "MariaDB", "Redis", "Elasticsearch",
     ))
     #skill_row("AI Integration", (
-      "FastAPI", "RAG pipelines", "OpenAI API", "On-premise GPU inference", "Computer Vision (Pytorch, ONNX)",
+      "FastAPI", "OpenAI API", "On-premise GPU inference"
     ))
     #skill_row("Languages", (
-      "Java", "Golang", "Python", "TypeScript",
-    ))
-    #skill_row("Tools", (
-      "Git", "Jira", "Confluence", "Robot Framework", "WireGuard", "n8n",
+      "Java", "Python", "Go", "Dart/Flutter", "TypeScript/ReactJs/AngularJs",
     ))
   ]
 )

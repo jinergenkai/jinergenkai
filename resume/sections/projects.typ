@@ -87,27 +87,28 @@
   ],
 
   // ── J Post Image ─────────────────────────────────────────────────────────
-  block[
-    #grid(
-      columns: (1fr, auto),
-      [#text(size: font_subsection, weight: "bold", fill: accent)[#link("https://t.me/jiner_screen_bot")[J Post Image — AI Content Pipeline]]],
-      [#text(size: font_detail, fill: secondary, style: "italic")[2025 - Present]],
-    )
-    #v(-0.3em)
-    #text(size: font_small)[#link("https://t.me/jiner_screen_bot")[→ t.me/jiner_screen_bot] · Try it: 5 free credits per telegram user]
-    #v(0.4em)
-    #set text(size: font_detail, fill: secondary)
+  // This for late addition if I want to showcase a personal project, please don't delete this
+  // block[
+  //   #grid(
+  //     columns: (1fr, auto),
+  //     [#text(size: font_subsection, weight: "bold", fill: accent)[#link("https://t.me/jiner_auto_bot")[J Post Image — AI Content Pipeline]]],
+  //     [#text(size: font_detail, fill: secondary, style: "italic")[2025 - Present]],
+  //   )
+  //   #v(-0.3em)
+  //   #text(size: font_small)[#link("https://t.me/jiner_auto_bot")[→ t.me/jiner_auto_bot] · Try it: 5 free credits per telegram user]
+  //   #v(0.4em)
+  //   #set text(size: font_detail, fill: secondary)
 
-    End-to-end AI content pipeline: local GPU image/video generation → automated posting → audience engagement, orchestrated via Telegram bot.
+  //   End-to-end AI content pipeline: local GPU image/video generation → automated posting → audience engagement, orchestrated via Telegram bot.
 
-    #v(0.3em)
-    • Architected on-premise GPU inference with WireGuard VPN tunneling through VPS hub – serving ZImage/Qwen models from local RTX via Telegram bot interface\
-    • Built automated distribution: ComfyUI generation → Postiz scheduling → multi-platform posting, with Supabase storage and FastAPI orchestration\
-    • Designed model-agnostic workflow enabling rapid swap between FLUX, SDXL, and video generation models without pipeline reconfiguration
+  //   #v(0.3em)
+  //   • Architected on-premise GPU inference with WireGuard VPN tunneling through VPS hub – serving ZImage/Qwen models from local RTX via Telegram bot interface\
+  //   • Built automated distribution: ComfyUI generation → Postiz scheduling → multi-platform posting, with Supabase storage and FastAPI orchestration\
+  //   • Designed model-agnostic workflow enabling rapid swap between FLUX, SDXL, and video generation models without pipeline reconfiguration
 
-    #v(0.3em)
-    #text(size: font_small, style: "italic")[Python, FastAPI, ComfyUI, WireGuard, Supabase, Telegram Bot API, Docker, n8n]
-  ],
+  //   #v(0.3em)
+  //   #text(size: font_small, style: "italic")[Python, FastAPI, ComfyUI, WireGuard, Supabase, Telegram Bot API, Docker, n8n]
+  // ],
 )
 
 // FOOTER

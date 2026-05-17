@@ -16,14 +16,14 @@
     )
     #place(
       top + left,
-      dx: -0.3cm,
+      dx: -0.1cm,
       dy: -0.8cm,
       text(
         size: 110pt,
         fill: primary.lighten(50%),
         weight: "bold",
         font: font_computer,
-      )[H#text(size: 10pt, fill: accent, weight: "bold", font: "New Computer Modern")[#h(2.5em)Backend Engineer]
+      )[H#text(size: 10pt, fill: accent, weight: "bold", font: "New Computer Modern")[#h(2em)Backend Engineer]
         #text(
           size: 30pt,
           fill: background_color,
@@ -54,7 +54,7 @@
       size: font_job_title,
       weight: "regular",
       fill: secondary,
-    )[Backend Engineer with 3 years building distributed systems serving 5,000+ devices across 5 countries. Specializing in Java/Spring Boot, Kafka, and Kubernetes, with hands-on AI integration experience shipping computer vision pipelines to enterprise clients.]
+    )[With 2+ years building scalable distributed systems across enterprise platforms. Specializing in Java/Spring Boot, Kafka, and Kubernetes, with hands-on AI integration experience.]
   ],
 )
 

@@ -32,7 +32,7 @@
       [#lucide-icon("phone", size: 5pt)],   [#link("tel:+84947339718")[+84 947 339 718]],
       [#lucide-icon("github", size: 5pt)],  [#link("https://github.com/jinergenkai")[github.com/jinergenkai]],
       [#lucide-icon("linkedin", size: 5pt)],  [#link("https://www.linkedin.com/in/jinergenkai")[linkedin.com/in/jinergenkai]],
-      [#lucide-icon("book", size: 5pt)],  [#link("https://jinergenkai.github.io")[Jiner Blog]],
+      [#lucide-icon("book", size: 5pt)],  [#link("https://jinergenkai.github.io/thoughts")[Jiner Blog]],
     )
   ],
 )

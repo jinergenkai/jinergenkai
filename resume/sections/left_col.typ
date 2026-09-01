@@ -16,9 +16,9 @@
       tracking: 0.15em,
       fill: accent,
     )[#box(baseline: 15%)[#lucide-icon("user-round")] CONTACT]
-    #v(-0.7em)
+    #v(-0.85em)
     #line(length: 80%, stroke: 0.5pt + divider)
-    #v(0.7em)
+    #v(0.5em)
 
     #set text(size: font_detail, fill: secondary)
 
@@ -50,7 +50,7 @@
       tracking: 0.15em,
       fill: accent,
     )[#box(baseline: 15%)[#lucide-icon("graduation-cap")] EDUCATION]
-    #v(-0.7em)
+    #v(-0.85em)
     #line(length: 80%, stroke: 0.5pt + divider)
 
     #block(
@@ -95,7 +95,7 @@
       tracking: 0.15em,
       fill: accent,
     )[#box(baseline: 15%)[#lucide-icon("award")] AWARDS]
-    #v(-0.7em)
+    #v(-0.85em)
     #line(length: 80%, stroke: 0.5pt + divider)
 
     #set text(size: font_detail, fill: secondary)

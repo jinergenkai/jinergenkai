@@ -65,6 +65,8 @@
         #text(size: font_detail, fill: secondary)[FPT University, HCMC]
         #v(-0.1em)
         #text(size: font_small, fill: secondary, style: "italic")[GPA 3.2/4.0 • 100% Scholarship]
+        #v(-0.1em)
+        #text(size: font_small, fill: secondary, style: "italic")[TOEIC 745]
       ],
     )
 

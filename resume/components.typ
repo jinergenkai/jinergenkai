@@ -12,13 +12,13 @@
 // Timeline vertical line + dot
 #let timeline_item(
   height: 10em,
-  color: timeline_color,
+  color: divider,
   dx: -0.7cm,
   dy_dot: 0.15em,
   dx_dot: 0.13em,
   dy_line: 2em,
 ) = {
-  place(left + top, dx: dx + dx_dot, dy: dy_dot, dot(color: color))
+  place(left + top, dx: dx + dx_dot, dy: dy_dot, dot(color: timeline_color))
   place(
     left + top,
     dx: dx + 0.085cm,

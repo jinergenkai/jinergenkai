@@ -17,7 +17,7 @@
       fill: accent,
     )[#box(baseline: 15%)[#lucide-icon("user-round")] CONTACT]
     #v(-0.7em)
-    #line(length: 3cm, stroke: 0.5pt + accent)
+    #line(length: 80%, stroke: 0.5pt + divider)
     #v(0.7em)
 
     #set text(size: font_detail, fill: secondary)
@@ -51,7 +51,7 @@
       fill: accent,
     )[#box(baseline: 15%)[#lucide-icon("graduation-cap")] EDUCATION]
     #v(-0.7em)
-    #line(length: 3.4cm, stroke: 0.5pt + accent)
+    #line(length: 80%, stroke: 0.5pt + divider)
 
     #block(
       below: 2.2em,
@@ -96,7 +96,7 @@
       fill: accent,
     )[#box(baseline: 15%)[#lucide-icon("award")] AWARDS]
     #v(-0.7em)
-    #line(length: 2.6cm, stroke: 0.5pt + accent)
+    #line(length: 80%, stroke: 0.5pt + divider)
 
     #set text(size: font_detail, fill: secondary)
 

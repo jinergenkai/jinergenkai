@@ -54,7 +54,7 @@
       size: font_job_title,
       weight: "regular",
       fill: secondary,
-    )[With 2+ years building scalable distributed systems across enterprise platforms. Specializing in Java/Spring Boot, Kafka, and Kubernetes, with hands-on AI integration experience.]
+    )[3+ years building distributed systems across telecom, healthcare, and e-commerce. Production work in Java/Spring Boot, Kafka, and Kubernetes, with hands-on AI integration. Used to owning a service end to end - design, rollout, and the pipeline that keeps it green.]
   ],
 )
 

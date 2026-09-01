@@ -5,15 +5,15 @@
 #import "../theme.typ": *
 #import "@preview/lucide:0.1.0": *
 
-#pagebreak()
+#v(0.6em)
 
 #text(
   size: font_section,
   weight: "bold",
   tracking: 0.15em,
   fill: accent,
-)[#box(baseline: 15%)[#lucide-icon("folder-open")] PROJECTS]
-#v(-0.7em)
+)[#box(baseline: 15%)[#lucide-icon("folder-open")] FREELANCE]
+#v(-0.85em)
 #line(length: 100%, stroke: 0.5pt + divider)
 #v(0.5em)
 
@@ -34,24 +34,26 @@
           columns: (1fr, auto),
           align: (left + top, right + top),
           text(size: font_subsection, weight: "bold", fill: accent)[#link("https://thuleht.com")[ThuleHT – E-commerce Platform]],
-          text(size: font_detail, fill: secondary, style: "italic")[2025 - Present],
+          text(size: font_detail, fill: secondary, style: "italic")[2026 - Present],
         )
         #v(-0.4em)
         #text(size: font_small)[#link("https://thuleht.com")[→ thuleht.com]]
       ],
     )
-    #v(0.4em)
+    #v(0.28em)
     #set text(size: font_detail, fill: secondary)
 
-    Go microservices backend for cosmetics e-commerce platform with integrated search, messaging, and chatbot infrastructure.
+    Cosmetics e-commerce platform with search, messaging, and chatbot.
 
-    #v(0.3em)
-    • Built notification service with multi-channel delivery (Zalo OA API, email) – order updates, promotional messaging, and Zalo Official Account registration/verification\
-    • Developed search service using Elasticsearch with Vietnamese language support for product discovery\
-    • Implemented chatbot with MCP-based tool integration for automated customer inquiries and order tracking
+    #set par(justify: false)
+    #v(0.21em)
+    • Built notification service over Zalo OA API and email — order updates, campaigns, and OA account verification\
+    • Built product search on Elasticsearch with Vietnamese language analysis\
+    • Shipped an MCP-based chatbot for customer inquiries and order tracking
 
-    #v(0.3em)
-    #text(size: font_small, style: "italic")[Golang, Elasticsearch, Zalo OA API, Docker, PostgreSQL]
+    #set par(justify: true)
+    #v(0.21em)
+    #text(size: font_small, style: "italic")[Tech: Golang, Elasticsearch, Zalo OA API, Docker, PostgreSQL]
   ],
 
   // ── Huynh Hanh – Management System ──────────────────────────────────────
@@ -72,18 +74,20 @@
         #text(size: font_small)[#link("https://huynhhanh.com")[→ huynhhanh.com] · #link("https://github.com/huynhhanh-ms")[github.com/huynhhanh-ms]]
       ],
     )
-    #v(0.4em)
+    #v(0.28em)
     #set text(size: font_detail, fill: secondary)
 
-    Multi-service platform for agricultural operations with Java and Go microservices backends.
+    Multi-service platform for agricultural operations.
 
-    #v(0.3em)
-    • Built Java storage service with RAG pipeline for intelligent document search across operational records\
-    • Developed Go land management service with geospatial data handling for multi-site property tracking\
-    • Integrated hardware data sync via Web Serial API for weighing stations with automated receipt generation
+    #set par(justify: false)
+    #v(0.21em)
+    • Built a storage service with a RAG pipeline for document search across operational records\
+    • Built a Go service for geospatial multi-site land tracking\
+    • Synced weighing-station hardware over Web Serial API with automated receipt generation
 
-    #v(0.3em)
-    #text(size: font_small, style: "italic")[Java, Spring Boot, Golang, PostgreSQL, Docker, RAG]
+    #set par(justify: true)
+    #v(0.21em)
+    #text(size: font_small, style: "italic")[Tech: Java, Python, FastAPI, Spring Boot, Golang, PostgreSQL, Docker, RAG]
   ],
 
   // ── J Post Image ─────────────────────────────────────────────────────────

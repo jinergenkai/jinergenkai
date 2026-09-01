@@ -15,26 +15,22 @@
       tracking: 0.15em,
       fill: accent,
     )[#box(baseline: 15%)[#lucide-icon("layers")] SKILLS]
-    #v(-0.7em)
+    #v(-0.85em)
     #line(length: 100%, stroke: 0.5pt + divider)
-    #v(0.3em)
+    #v(0.8em)
 
     #skill_row("Core Expertise", (
       "Java", "Spring Boot", "Kafka", "Microservices", "Distributed Systems",
     ))
-    #skill_row("Infrastructure", (
-      "Kubernetes", "Helm", "Docker", "Jenkins", "Prometheus", "Grafana",
+    #skill_row("Infra & Cloud", (
+      "Kubernetes","AWS (Lambda, S3, DynamoDB)",  "Helm", "Docker", "Jenkins", "Robot Framework", "Prometheus", "Grafana",
     ))
-    #skill_row("Data", (
-      "PostgreSQL", "MariaDB", "Redis", "Elasticsearch",
-    ))
-    #skill_row("AI Integration", (
-      "FastAPI", "OpenAI API", "On-premise GPU inference"
+    #skill_row("Data & AI", (
+      "PostgreSQL", "MariaDB", "Redis", "Elasticsearch", "FastAPI", "OpenAI API", "On-premise GPU inference",
     ))
     #skill_row("Languages", (
-      "Java", "Python", "Go", "Dart/Flutter", "TypeScript/ReactJs/AngularJs",
+      "Python", "Go", "Dart/Flutter", "TypeScript/ReactJs",
     ))
   ]
 )
 
-#v(0.3cm)

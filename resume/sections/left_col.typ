@@ -59,7 +59,7 @@
         #grid(
           columns: (1fr, auto),
           [#text(size: font_detail, weight: "bold", fill: accent)[• Bachelor of IT]],
-          pad(right: 3.5em)[#align(right)[#text(size: font_small, fill: secondary, style: "italic")[2020 - 2024]]],
+          pad(right: 0.5cm)[#align(right)[#text(size: font_small, fill: secondary, style: "italic")[2020 - 2024]]],
         )
         #v(-0.2em)
         #text(size: font_detail, fill: secondary)[FPT University, HCMC]
@@ -75,7 +75,7 @@
         #grid(
           columns: (1fr, auto),
           [#text(size: font_detail, weight: "bold", fill: accent)[• High School for Gifted]],
-          pad(right: 3.5em)[#align(right)[#text(size: font_small, fill: secondary, style: "italic")[2017 - 2020]]],
+          pad(right: 0.5cm)[#align(right)[#text(size: font_small, fill: secondary, style: "italic")[2017 - 2020]]],
         )
         #v(-0.2em)
         #text(size: font_detail, fill: secondary)[Nguyen Du HS (Informatics), Dak Lak]

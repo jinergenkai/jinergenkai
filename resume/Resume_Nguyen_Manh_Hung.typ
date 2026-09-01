@@ -14,7 +14,7 @@
 
 #set page(
   paper: "a4",
-  margin: (x: 1.5cm, bottom: 0.5cm, top: 2cm),
+  margin: (x: 1.1cm, bottom: 0.5cm, top: 1.6cm),
   fill: background_color,
 )
 
@@ -37,7 +37,7 @@
 #include "sections/skills.typ"
 
 #grid(
-  columns: (30%, 65%),
+  columns: (25%, 70%),
   column-gutter: 0.5cm,
   [#include "sections/left_col.typ"],
   [#include "sections/experience.typ"],

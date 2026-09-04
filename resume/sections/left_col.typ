@@ -57,7 +57,7 @@
       [
         #grid(
           columns: (1fr, auto),
-          [#text(size: font_detail, weight: "bold", fill: accent)[• Bachelor of IT]],
+          [#text(size: font_detail, weight: "bold", fill: accent)[#link("https://github.com/jinergenkai/jinergenkai/blob/main/certificates/FPT%20University%20-%20Bachelor's%20Degree%20.jpg")[• Bachelor of IT #box(baseline: 15%)[#text(fill: link_color)[#lucide-icon("external-link", size: 6pt)]]]]],
           pad(right: 0.5cm)[#align(right)[#text(size: font_small, fill: secondary, style: "italic")[2020 - 2024]]],
         )
         #v(-0.2em)

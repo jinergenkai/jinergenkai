@@ -24,7 +24,7 @@
     ))
     #skill_row("Infra & Cloud", (
       "Kubernetes",
-      // "AWS (Lambda, S3, DynamoDB)",
+      "AWS (Lambda, S3, DynamoDB)",
       "Helm", "Docker", "Jenkins", "Robot Framework", "Prometheus", "Grafana",
     ))
     #skill_row("Data & AI", (
@@ -32,7 +32,7 @@
     ))
     #skill_row("Languages", (
       "Python", 
-      // "Go", 
+      "Go", 
       "Dart/Flutter", "TypeScript/ReactJs",
     ))
   ]

@@ -109,8 +109,8 @@
 
         #grid(
           columns: (1fr, auto),
-          [#text(size: font_subsection, weight: "bold", fill: accent)[FPT Software – Software Engineer (Intern → Full-time)]],
-          [#text(size: font_detail, fill: secondary, style: "italic")[Jan 2023 - Apr 2024]],
+          [#text(size: font_subsection, weight: "bold", fill: accent)[FPT Software – Software Engineer]],
+          [#text(size: font_detail, fill: secondary, style: "italic")[Aug 2023 - Apr 2024]],
         )
         #v(0.8em)
 

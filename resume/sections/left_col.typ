@@ -31,7 +31,6 @@
       [#lucide-icon("mail", size: 5pt)],    [#link("mailto:nmhung.works@gmail.com")[nmhung.works\@gmail.com]],
       [#lucide-icon("phone", size: 5pt)],   [#link("tel:+84947339718")[+84 947 339 718]],
       [#lucide-icon("github", size: 5pt)],  [#link("https://github.com/jinergenkai")[github.com/jinergenkai]],
-      [#lucide-icon("linkedin", size: 5pt)],  [#link("https://www.linkedin.com/in/jinergenkai")[linkedin.com/in/jinergenkai]],
       [#lucide-icon("book", size: 5pt)],  [#link("https://jinergenkai.github.io/thoughts")[Jiner Blog]],
     )
   ],
@@ -66,7 +65,7 @@
         #v(-0.1em)
         #text(size: font_small, fill: secondary, style: "italic")[GPA 3.2/4.0 • 100% Scholarship]
         #v(-0.1em)
-        #text(size: font_small, fill: secondary, style: "italic")[TOEIC 745]
+        #text(size: font_small, fill: secondary, style: "italic")[#link("https://github.com/jinergenkai/jinergenkai/blob/main/certificates/TOEIC%20745%20LR%2013-01-2025.jpg")[TOEIC 745 #box(baseline: 15%)[#text(fill: link_color)[#lucide-icon("external-link", size: 6pt)]]]]
       ],
     )
 

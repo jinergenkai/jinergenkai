@@ -46,7 +46,7 @@
         #set par(justify: false)
 
         • Built campaign orchestration for firmware upgrades across 5,000+ devices in 5 countries - rollback to the last known-good image, staggered rollout windows, and idempotent per-device state transitions over NETCONF/YANG\
-        • Served as Build Police for a 14-engineer team across 5 countries - triaged Jenkins failures, isolated flaky Robot Framework tests, and kept merges unblocked\
+        • Served as Build Police for a 14-engineer team across 3 countries - triaged Jenkins failures, isolated flaky Robot Framework tests, and kept merges unblocked\
         • Built windowed metric computation in the KPI engine - telemetry from thousands of devices on a 15-minute cycle, keyed by device ID across 8 Kafka partitions for ordering, feeding OpenTSDB and the alarm pipeline
 
         #set par(justify: true)

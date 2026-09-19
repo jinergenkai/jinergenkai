@@ -128,7 +128,7 @@
         #set par(justify: true)
         #v(0.35em)
         #text(size: font_small, fill: secondary, style: "italic")[
-          Tech: C++, C\#, ASP.NET Core
+          Tech: C++, Java
         ]
       ],
     )
